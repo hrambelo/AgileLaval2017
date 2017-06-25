@@ -1,6 +1,5 @@
 <!doctype html>
-<html lang="en">
-
+<html lang="fr">
 	<head>
 		<meta charset="utf-8">
 
@@ -33,6 +32,11 @@
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
+		<style>
+			cite { 
+			    font-style: italic;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -42,6 +46,117 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 
+				<section>
+					<div class="logo"></div>
+					<h1>Feedback en continue <br/> grâce au TDD <br/> et au As Code</h1>
+					<p>
+						<a href="http://www.twitter.com/hrambelo">@hrambelo</a> - 
+						<a href="http://www.twitter.com/gcollic">@gcollic</a>
+					</p>
+				</section>
+				<section>
+					<h1>Feedback</h1>
+					<img src="img/xp.gif">
+				</section>
+				<section>
+					<h1>TDD</h1>
+					<h2>Développement piloté par les tests</h2>
+					<img src="img/tdd-simple.svg">
+					<p><cite>From Growing Object-Oriented Software by Nat Pryce and Steve Freeman.</cite></p>
+				</section>
+				<section>
+					<h1>Démo</h1>
+				</section>
+				<section>
+					<h1>ATDD</h1>
+					<h2>Développement piloté par les tests d'acceptance</h2>
+					<img src="img/tdd-with-acceptance-tests.svg">
+					<p><cite>From Growing Object-Oriented Software by Nat Pryce and Steve Freeman.</cite></p>
+				</section>
+				<section>
+					<h1>Test unitaire</h1>
+					<ul>
+						<li>Ne coûte pas plus cher à être exécuté plus souvent</li>
+						<li>Communique et documente comment les choses fonctionnent</li>
+						<li>Correspond vraiment à ce qui est fait (obsolescence de l'écrit)</li>
+						<li>Est plus déterministe qu'un humain</li>
+						<li>Est versionnable !</li>
+					</ul>
+				</section>
+				<section>
+					<h1>DockerFile</h1>
+					<ul>
+						<li>Ne coûte pas plus cher à être exécuté plus souvent</li>
+						<li>Communique et documente comment les choses fonctionnent</li>
+						<li>Correspond vraiment à ce qui est fait (obsolescence de l'écrit)</li>
+						<li>Est plus déterministe qu'un humain</li>
+						<li>Est versionnable !</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Chef recipe</h1>
+					<ul>
+						<li>Ne coûte pas plus cher à être exécuté plus souvent</li>
+						<li>Communique et documente comment les choses fonctionnent</li>
+						<li>Correspond vraiment à ce qui est fait (obsolescence de l'écrit)</li>
+						<li>Est plus déterministe qu'un humain</li>
+						<li>Est versionnable !</li>
+					</ul>
+				</section>
+				<section>
+					<h1><em>Le code !</em></h1>
+					<ul>
+						<li>Ne coûte pas plus cher à être exécuté plus souvent</li>
+						<li>Communique et documente comment les choses fonctionnent</li>
+						<li>Correspond vraiment à ce qui est fait (obsolescence de l'écrit)</li>
+						<li>Est plus déterministe qu'un humain</li>
+						<li>Est versionnable !</li>
+					</ul>
+				</section>
+				<section>
+					<h1><em>"As Code"</em> <br/> eats the World</h1>
+				</section>
+				<section>
+					<ul>
+						<li>Specification As Code (BDD/ATDD)</li>
+						<li>Infrastructure As Code</li>
+						<li>Documentation As Code</li>
+						<li>Build Pipeline As Code</li>
+						<li>...</li>
+						<li>ALL THE THINGS As Code</li>
+					</ul>
+					<img src="img/allthethings.jpg">
+				</section>
+				<section>
+					<h1>Specification as Code</h1>
+					<img src="img/specs.png">
+				</section>
+				<section>
+					<img src="img/gherkin.png">
+				</section>
+				<section>
+					<h1>Infrastructure as code</h1>
+					<p> ??
+						Provisionning ?<br/>
+						Docker / Dockerfile / compose ?<br/>
+						traefic
+					</p>
+				</section>
+				<section>
+					<h1>Documentation as code</h1>
+					<p>?</p>
+				</section>
+				<section>
+					<h1>DevOps</h1>
+					<img src="img/devops.png">
+				</section>
+				<section>
+tout ca c'est déjà un pas vers DevOps en fait (clin d'oeil aux 4 piliers)
+CI -> CD = Automation
+Infra as Code -> Automation
+Documentaion/Specification as Code -> Sharing
+"yapuka faukon" un peu de dashboard pour le monitoring (ok ko ok ko) et bon courage pour la culture :D
+				</section>
 			</div>
 			<div style="display: block;"class="progress"><span style="width: 109.118px;"></span></div>
 			<footer style="background:rgba(219,120,39,1)" id="title-footer">
@@ -65,11 +180,11 @@
 				history: true,
 				center: false,
 				// Loop the presentation
-				loop: true,
+				loop: false,
 				// Number of milliseconds between automatically proceeding to the
 				// next slide, disabled when set to 0, this value can be overwritten
 				// by using a data-autoslide attribute on your slides
-				autoSlide: 1200,
+				autoSlide: 0,
 				// Stop auto-sliding after user input
 				autoSlideStoppable: true,
 				transition: 'none', // none/fade/slide/convex/concave/zoom
