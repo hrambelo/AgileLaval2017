@@ -1,207 +1,226 @@
 <!doctype html>
 <html lang="fr">
-	<head>
-		<meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+    <title>reveal.js - The HTML Presentation Framework</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-		<link rel="icon" href="img/favicon.ico" type="image/x-icon">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/beige.css" id="theme">
 
-		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-		<link rel="stylesheet" href="plugin/title-footer/title-footer.css">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="plugin/title-footer/title-footer.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-		<style>
-			cite { 
-			    font-style: italic;
-			}
-		</style>
-	</head>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <style>
+        cite {
+            font-style: italic;
+        }
+    </style>
+</head>
 
-	<body>
+<body>
 
-		<div class="reveal">
+<div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
 
-				<section>
-					<br />
-					<br />
-					<h1>Feedback en continue <br/> grâce au <b>TDD </b><br/> et au <b>As Code</b></h1>
-					<br />
-					<p>
-						<a href="http://www.twitter.com/hrambelo">@hrambelo</a> - 
-						<a href="http://www.twitter.com/gcollic">@gcollic</a>
-					</p>
-				</section>
-				<section>
-					<h1>Feedback</h1>
-					<img class="stretch" src="img/xp.gif">
-				</section>
-				<section>
-					<h1>TDD</h1>
-					<h2>Développement piloté par les tests</h2>
-					<img  class="stretch" 	 src="img/tdd-simple.svg">
-					<p><cite>From Growing Object-Oriented Software by Nat Pryce and Steve Freeman.</cite></p>
-				</section>
-				<section>
-					<h1>ATDD</h1>
-					<h2>Développement piloté par les tests d'acceptance</h2>
-					<img class="stretch" src="img/tdd-with-acceptance-tests.svg">
-					<p><cite>From Growing Object-Oriented Software by Nat Pryce and Steve Freeman.</cite></p>
-				</section>
-				<section>
-					<h1>Démo</h1>
-				</section>
-				<section>
-					<h1>Test unitaire</h1>
-					<ul>
-						<li>Ne coûte pas plus cher à être exécuté plus souvent</li>
-						<li>Communique et documente comment les choses fonctionnent</li>
-						<li>Correspond vraiment à ce qui est fait (obsolescence de l'écrit)</li>
-						<li>Est plus déterministe qu'un humain</li>
-						<li>Est versionnable !</li>
-					</ul>
-				</section>
-				<section>
-					<h1>DockerFile</h1>
-					<ul>
-						<li>Ne coûte pas plus cher à être exécuté plus souvent</li>
-						<li>Communique et documente comment les choses fonctionnent</li>
-						<li>Correspond vraiment à ce qui est fait (obsolescence de l'écrit)</li>
-						<li>Est plus déterministe qu'un humain</li>
-						<li>Est versionnable !</li>
-					</ul>
-				</section>
-				<section>
-					<h1>Chef recipe</h1>
-					<ul>
-						<li>Ne coûte pas plus cher à être exécuté plus souvent</li>
-						<li>Communique et documente comment les choses fonctionnent</li>
-						<li>Correspond vraiment à ce qui est fait (obsolescence de l'écrit)</li>
-						<li>Est plus déterministe qu'un humain</li>
-						<li>Est versionnable !</li>
-					</ul>
-				</section>
-				<section>
-					<h1><em>Le code !</em></h1>
-					<ul>
-						<li>Ne coûte pas plus cher à être exécuté plus souvent</li>
-						<li>Communique et documente comment les choses fonctionnent</li>
-						<li>Correspond vraiment à ce qui est fait (obsolescence de l'écrit)</li>
-						<li>Est plus déterministe qu'un humain</li>
-						<li>Est versionnable !</li>
-					</ul>
-				</section>
-				<section>
-					<h1><em>"As Code"</em> <br/> eats the World</h1>
-				</section>
-				<section>
-					<ul>
-						<li>Specification As Code (BDD/ATDD)</li>
-						<li>Infrastructure As Code</li>
-						<li>Documentation As Code</li>
-						<li>Build Pipeline As Code</li>
-						<li>...</li>
-						<li>ALL THE THINGS As Code</li>
-					</ul>
-					<img class="stretch" src="img/allthethings.jpg">
-				</section>
-				<section>
-					<h1>Specification as Code</h1>
-					<img class="stretch" src="img/specs.png">
-					<p><cite>From Specification By Example by Gojko Adzic.</cite></p>
-				</section>
-				<section>
-					<img class="stretch" src="img/gherkin.png">
-				</section>
-				<section>
-					<h1>Infrastructure as code</h1>
-					<p> ??
-						Provisionning ?<br/>
-						Docker / Dockerfile / compose ?<br/>
-						traefic
-					</p>
-				</section>
-				<section>
-					<h1>Documentation as code</h1>
-					<p>?</p>
-				</section>
-				<section>
-					<h1>DevOps</h1>
-					<img class="stretch" src="img/devops.png">
-				</section>
-				<section>
-tout ca c'est déjà un pas vers DevOps en fait (clin d'oeil aux 4 piliers)
-CI -> CD = Automation
-Infra as Code -> Automation
-Documentaion/Specification as Code -> Sharing
-"yapuka faukon" un peu de dashboard pour le monitoring (ok ko ok ko) et bon courage pour la culture :D
-				</section>
-			</div>
-			<div style="display: block;"class="progress"><span style="width: 109.118px;"></span></div>
-			<footer style="background:rgba(219,120,39,1)" id="title-footer">
-				<p class="atLeft"><b>AgileLaval 2017</b></p>
-				<p class="atRight"><b>#AgileLaval17</b></p>
-			</footer>
+        <section>
+            <br/>
+            <br/>
+            <h1>Feedback en continue <br/> grâce au <b>TDD </b><br/> et au <b>As Code</b></h1>
+            <br/>
+            <p>
+                <a href="http://www.twitter.com/hrambelo">@hrambelo</a> -
+                <a href="http://www.twitter.com/gcollic">@gcollic</a>
+            </p>
+        </section>
+        <section>
+            <h1>Feedback</h1>
+            <img class="stretch" src="img/xp.gif">
+        </section>
+        <section>
+            <h1>TDD</h1>
+            <h2>Développement piloté par les tests</h2>
+            <img class="stretch" src="img/tdd-simple.svg">
+            <p><cite>From Growing Object-Oriented Software by Nat Pryce and Steve Freeman.</cite></p>
+        </section>
+        <section>
+            <h1>ATDD</h1>
+            <h2>Développement piloté par les tests d'acceptance</h2>
+            <img class="stretch" src="img/tdd-with-acceptance-tests.svg">
+            <p><cite>From Growing Object-Oriented Software by Nat Pryce and Steve Freeman.</cite></p>
+        </section>
+        <section>
+            <h1>Démo</h1>
+        </section>
+        <section>
+            <h1>Test unitaire</h1>
+            <ul>
+                <li>Ne coûte pas plus cher à être exécuté plus souvent</li>
+                <li>Communique et documente comment les choses fonctionnent</li>
+                <li>Correspond vraiment à ce qui est fait (obsolescence de l'écrit)</li>
+                <li>Est plus déterministe qu'un humain</li>
+                <li>Est versionnable !</li>
+            </ul>
+        </section>
+        <section>
+            <h1>DockerFile</h1>
+            <ul>
+                <li>Ne coûte pas plus cher à être exécuté plus souvent</li>
+                <li>Communique et documente comment les choses fonctionnent</li>
+                <li>Correspond vraiment à ce qui est fait (obsolescence de l'écrit)</li>
+                <li>Est plus déterministe qu'un humain</li>
+                <li>Est versionnable !</li>
+            </ul>
+        </section>
+        <section>
+            <h1>Chef recipe</h1>
+            <ul>
+                <li>Ne coûte pas plus cher à être exécuté plus souvent</li>
+                <li>Communique et documente comment les choses fonctionnent</li>
+                <li>Correspond vraiment à ce qui est fait (obsolescence de l'écrit)</li>
+                <li>Est plus déterministe qu'un humain</li>
+                <li>Est versionnable !</li>
+            </ul>
+        </section>
+        <section>
+            <h1><em>Le code !</em></h1>
+            <ul>
+                <li>Ne coûte pas plus cher à être exécuté plus souvent</li>
+                <li>Communique et documente comment les choses fonctionnent</li>
+                <li>Correspond vraiment à ce qui est fait (obsolescence de l'écrit)</li>
+                <li>Est plus déterministe qu'un humain</li>
+                <li>Est versionnable !</li>
+            </ul>
+        </section>
+        <section>
+            <h1><em>"As Code"</em> <br/> eats the World</h1>
+        </section>
+        <section>
+            <ul>
+                <li>Specification As Code (BDD/ATDD)</li>
+                <li>Infrastructure As Code</li>
+                <li>Documentation As Code</li>
+                <li>Build Pipeline As Code</li>
+                <li>...</li>
+                <li>ALL THE THINGS As Code</li>
+            </ul>
+            <img class="stretch" src="img/allthethings.jpg">
+        </section>
+        <section>
+            <h1>Specification as Code</h1>
+            <img class="stretch" src="img/specs.png">
+            <p><cite>From Specification By Example by Gojko Adzic.</cite></p>
+        </section>
+        <section>
+            <img class="stretch" src="img/gherkin.png">
+        </section>
+        <section>
+            <h1>Infrastructure as code</h1>
+            <p> ??
+                Provisionning ?<br/>
+                Docker / Dockerfile / compose ?<br/>
+                traefic
+            </p>
+        </section>
+        <section>
+            <h1>Documentation as code</h1>
+            <p>?</p>
+        </section>
+        <section>
+            <h1>DevOps</h1>
+            <img class="stretch" src="img/devops.png">
+        </section>
+        <section>
+            tout ca c'est déjà un pas vers DevOps en fait (clin d'oeil aux 4 piliers)
+            CI -> CD = Automation
+            Infra as Code -> Automation
+            Documentaion/Specification as Code -> Sharing
+            "yapuka faukon" un peu de dashboard pour le monitoring (ok ko ok ko) et bon courage pour la culture :D
+        </section>
+    </div>
+    <div style="display: block;" class="progress"><span style="width: 109.118px;"></span></div>
+    <footer style="background:rgba(219,120,39,1)" id="title-footer">
+        <p class="atLeft"><b>AgileLaval 2017</b></p>
+        <p class="atRight"><b>#AgileLaval17</b></p>
+    </footer>
 
-		</div>
+</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
 
-		<script>
+<script>
 
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: false,
-				// Loop the presentation
-				loop: false,
-				// Number of milliseconds between automatically proceeding to the
-				// next slide, disabled when set to 0, this value can be overwritten
-				// by using a data-autoslide attribute on your slides
-				autoSlide: 0,
-				// Stop auto-sliding after user input
-				autoSlideStoppable: true,
-				transition: 'none', // none/fade/slide/convex/concave/zoom
-				// Optional reveal.js plugins
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: false,
+        // Loop the presentation
+        loop: false,
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+        // Optional reveal.js plugins
+        dependencies: [
+            {
+                src: 'lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            }
+            },
+            {
+                src: 'plugin/markdown/marked.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'plugin/highlight/highlight.js', async: true, condition: function () {
+                return !!document.querySelector('pre code');
+            }, callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+            },
+            {src: 'plugin/zoom-js/zoom.js', async: true},
+            {src: 'plugin/notes/notes.js', async: true}
+        ]
+    });
 
-		</script>
+</script>
 
-	</body>
+</body>
 </html>
