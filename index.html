@@ -90,7 +90,7 @@
             </ul>
         </section>
         <section>
-            <h1>Dockerfile</h1>
+            <h1>Recette</h1>
             <ul>
                 <li>Ne coûte pas plus cher à être exécuté plus souvent</li>
                 <li>Communique et documente comment les choses fonctionnent</li>
@@ -100,7 +100,7 @@
             </ul>
         </section>
         <section>
-            <h1>Fichier puppet</h1>
+            <h1>Script</h1>
             <ul>
                 <li>Ne coûte pas plus cher à être exécuté plus souvent</li>
                 <li>Communique et documente comment les choses fonctionnent</li>
@@ -142,21 +142,257 @@
         </section>
         <section>
             <h1>Infrastructure as code</h1>
-            <img class="stretch" src="img/infraascode.png" />
             <ul>
-                <li>Provisionning</li>
-                <li>Scaling</li>
+                <li>Dockerfile</li>
+                <li>Docker compose file</li>
+                <li>Puppet recipe</li>
+                <li>Playbook ansible</li>
             </ul>
-            <p> ??
-                Provisionning ?<br/>
-                Docker / Dockerfile / compose ?<br/>
-                traefic
-            </p>
+        </section>
+        <section>
+            <h1>Dockerfile</h1>
+            <pre><code data-noescape>
+<mark>FROM</mark> java:8
+
+ADD spring-petclinic /app
+
+ENV M2_HOME /app
+EXPOSE 8080
+WORKDIR /app
+
+RUN chmod a+x /app/mvnw
+RUN ls /app/mvnw
+RUN /bin/bash -c '/app/mvnw -e clean install spring-boot:repackage -DskipTests'
+
+CMD /app/mvnw -e spring-boot:run -DskipTests
+            </code></pre>
+            <p><cite>From https://github.com/aestasit.</cite></p>
+        </section>
+       <section>
+            <h1>Dockerfile</h1>
+            <pre><code data-noescape>
+FROM java:8
+
+ADD spring-petclinic /app
+
+ENV M2_HOME /app
+EXPOSE 8080
+WORKDIR /app
+
+RUN chmod a+x /app/mvnw
+RUN ls /app/mvnw
+RUN /bin/bash -c '/app/mvnw -e clean install spring-boot:repackage -DskipTests'
+
+CMD /app/mvnw -e <mark>spring-boot:run</mark> -DskipTests
+            </code></pre>
+            <p><cite>From https://github.com/aestasit.</cite></p>
+        </section>
+       <section>
+            <h1>Dockerfile</h1>
+            <pre><code data-noescape>
+FROM java:8
+
+ADD spring-petclinic /app
+
+ENV M2_HOME /app
+EXPOSE 8080
+WORKDIR /app
+
+RUN chmod a+x /app/mvnw
+RUN ls /app/mvnw
+RUN /bin/bash -c '/app/mvnw -e clean install spring-boot:repackage -DskipTests'
+
+CMD /app/mvnw -e spring-boot:run -DskipTests
+            </code></pre>
+            <p><cite>From https://github.com/aestasit.</cite></p>
+            <pre><code>
+docker run -d my_bootiful_petclinic
+            </code></pre>
+        </section>
+        <section>
+            <h1>Docker compose file</h1>
+            <pre class="stretch"><code data-trim>
+version: '2'
+services:
+
+  elasticsearch:
+    build: elasticsearch/
+    ...
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+
+  logstash:
+    build: logstash/
+    ...
+    ports:
+      - "5000:5000"
+    depends_on:
+      - elasticsearch
+
+  kibana:
+    build: kibana/
+    ...
+    ports:
+      - "5601:5601"
+    depends_on:
+      - elasticsearch
+            </code></pre>
+        </section>
+        <section>
+          <h1>Docker compose file</h1>
+          <pre class="stretch"><code data-trim data-noescape>
+version: '2'
+services:
+
+  <mark>elasticsearch</mark>:
+    build: elasticsearch/
+    ...
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+
+  <mark>logstash</mark>:
+    build: logstash/
+    ...
+    ports:
+      - "5000:5000"
+    depends_on:
+      - elasticsearch
+
+  <mark>kibana</mark>:
+    build: kibana/
+    ...
+    ports:
+      - "5601:5601"
+    depends_on:
+      - elasticsearch
+            </code></pre>
+        </section>
+       <section>
+          <h1>Docker compose file</h1>
+          <pre class="stretch"><code data-trim data-noescape>
+version: '2'
+services:
+
+  elasticsearch:
+    build: elasticsearch/
+    ...
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+
+  logstash:
+    build: logstash/
+    ...
+    ports:
+      - "5000:5000"
+    <mark>depends_on</mark>:
+      <mark>- elasticsearch</mark>
+
+  kibana:
+    build: kibana/
+    ...
+    ports:
+      - "5601:5601"
+    <mark>depends_on</mark>:
+      <mark>- elasticsearch</mark>
+            </code></pre>
         </section>
         <section>
             <h1>Puppet</h1>
             <img class="stretch" src="img/puppet.png" />
             <p><cite>From https://github.com/aestasit.</cite></p>
+        </section>
+        <section>
+            <h1>Puppet</h1>
+            <pre class="stretch"><code data-trim>
+package { 'ssh' :
+    ensure => latest
+}
+
+file { 'sshd_config' :
+    path    => '/etc/ssh/sshd_config',
+    owner   => root,
+    group   => root,
+    require => Package[ssh],
+    notify  => Service[ssh],
+    ...
+}
+
+service { 'ssh' :
+    ensure => running
+}
+            </code></pre>
+            <p><cite>From https://github.com/aestasit.</cite></p>
+        </section>
+        <section>
+            <h1>Puppet</h1>
+            <pre class="stretch"><code data-trim data-noescape>
+package { 'ssh' :
+    ensure => latest
+}
+
+file { 'sshd_config' :
+    path    => '/etc/ssh/sshd_config',
+    owner   => root,
+    group   => root,
+    require => Package[ssh],
+    <mark>notify  => Service[ssh]</mark>,
+    ...
+}
+
+service { 'ssh' :
+    ensure => running
+}
+            </code></pre>
+            <p><cite>From https://github.com/aestasit.</cite></p>
+        </section>
+        <section>
+            <h1>Playbook ansible</h1>
+            <pre class="stretch"><code>
+---
+- hosts: webservers
+  vars:
+    http_port: 80
+    max_clients: 200
+  remote_user: root
+  tasks:
+  - name: ensure apache is at the latest version
+    yum: name=httpd state=latest
+  - name: write the apache config file
+    template: src=/srv/httpd.j2 dest=/etc/httpd.conf
+    notify:
+    - restart apache
+  - name: ensure apache is running (and enable it at boot)
+    service: name=httpd state=started enabled=yes
+  handlers:
+    - name: restart apache
+      service: name=httpd state=restarted
+            </code></pre>
+        </section>
+        <section>
+            <h1>Playbook ansible</h1>
+            <pre class="stretch"><code data-noescape>
+---
+- hosts: webservers
+  vars:
+    http_port: 80
+    max_clients: 200
+  remote_user: root
+  tasks:
+  - name: ensure apache is at the latest version
+    yum: name=httpd state=latest
+  - name: write the apache config file
+    template: src=/srv/httpd.j2 dest=/etc/httpd.conf
+    <mark>notify:
+    - restart apache</mark>
+  - name: ensure apache is running (and enable it at boot)
+    service: name=httpd state=started enabled=yes
+  handlers:
+    - name: restart apache
+      service: name=httpd state=restarted
+            </code></pre>
         </section>
         <section>
             <h1>Documentation as code</h1>
@@ -167,11 +403,17 @@
             </ul>
         </section>
         <section>
-            <h1>Swagger</h1>
-            <img class="stretch" src="img/Swagger.png" />
+            <h1>Markdown</h1>
+            <img class="stretch" src="img/markdown-preview.png" alt="Markdown example" />
+            <p><cite>From https://mastercaweb.u-strasbg.fr/rediger-web-markdown/</cite></p>
         </section>
         <section>
-            <h1>Démo</h1>
+            <h1>Asciidoc</h1>
+            <img class="stretch" src="img/Asciidoc.png" alt="Asciidoc example"  />
+        </section>
+        <section>
+            <h1>Swagger</h1>
+            <img class="stretch" src="img/Swagger.png" />
         </section>
         <section>
             <h1>DevOps ?</h1>
@@ -213,8 +455,14 @@
             <img class="stretch" src="img/testNotPhase.png">
         </section>
         <section>
+            <h1>Questions ?</h1>
+        </section>
+        <section>
             <h1>Merci !</h1>
             <img class="stretch" src="img/merci-sponsor.png">
+        </section>
+        <section>
+            <h1>Démo</h1>
         </section>
     </div>
     <div style="display: block;" class="progress"><span style="width: 109.118px;"></span></div>
