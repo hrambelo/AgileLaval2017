@@ -80,22 +80,19 @@
             <img class="stretch" src="img/feedbackloop.png">
         </section>
        <section>
-          <h1>Feedback</h1>
-          <h2>Integration Continue</h2>
+          <h1>Intégration Continue</h1>
           <img class="stretch" src="img/successful-pipeline-OK.png">
        </section>
         <section>
-            <h1>Feedback</h1>
-           <h2>Integration Continue</h2>
+           <h1>Intégration Continue</h1>
             <img class="stretch" src="img/failed-pipeline-KO.png">
         </section>
         <section>
-            <h1>Feedback</h1>
-           <h2>Integration Continue</h2>
+           <h1>Intégration Continue</h1>
             <img class="stretch" src="img/successful-pipeline-OK.png">
         </section>
         <section>
-            <h1>Test unitaire</h1>
+            <h1>Le test automatique</h1>
             <ul>
                 <li>Ne coûte pas plus cher à être exécuté plus souvent</li>
                 <li>Communique et documente comment les choses fonctionnent</li>
@@ -105,17 +102,7 @@
             </ul>
         </section>
         <section>
-            <h1>Recette</h1>
-            <ul>
-                <li>Ne coûte pas plus cher à être exécuté plus souvent</li>
-                <li>Communique et documente comment les choses fonctionnent</li>
-                <li>Correspond vraiment à ce qui est fait (obsolescence de l'écrit)</li>
-                <li>Est plus déterministe qu'un humain</li>
-                <li>Est versionnable !</li>
-            </ul>
-        </section>
-        <section>
-            <h1>Script</h1>
+            <h1>Le build automatique</h1>
             <ul>
                 <li>Ne coûte pas plus cher à être exécuté plus souvent</li>
                 <li>Communique et documente comment les choses fonctionnent</li>
@@ -140,13 +127,19 @@
         <section>
             <ul>
                 <li>Specification As Code (BDD/ATDD)</li>
-                <li>Infrastructure As Code</li>
                 <li>Documentation As Code</li>
                 <li>Build Pipeline As Code</li>
+                <li>Infrastructure As Code</li>
                 <li>...</li>
-                <li>ALL THE THINGS As Code</li>
             </ul>
+        </section>
+        <section>
+            <h1>ALL THE THINGS As Code</h1>
             <img class="stretch" src="img/allthethings.jpg">
+        </section>
+        <section>
+            <h1>Biz Dev Ops</h1>
+            <img class="stretch" src="img/testNotPhase.png">
         </section>
         <section>
             <h1>Specification as Code</h1>
@@ -156,13 +149,139 @@
         <section  data-background="img/gherkin.png">
         </section>
         <section>
+            <h1>Documentation as code</h1>
+            <ul>
+                <li>Living Documentation</li>
+                <li>Markdown</li>
+                <li>Asciidoc</li>
+                <li>Swagger</li>
+            </ul>
+        </section>
+        <section>
+            <h1>Living Documentation</h1>
+            <img class="stretch" src="img/glossary.jpg" />
+            <p><cite>From <a href="https://leanpub.com/livingdocumentation">https://leanpub.com/livingdocumentation</a> by Cyrille Martraire</cite></p>
+        </section>
+        <section>
+            <h1>Living Documentation</h1>
+            <img class="stretch" src="img/diagram.jpg" />
+            <p><cite>From <a href="https://leanpub.com/livingdocumentation">https://leanpub.com/livingdocumentation</a> by Cyrille Martraire</cite></p>
+        </section>
+        <section>
+            <h1>Markdown</h1>
+            <img class="stretch" src="img/markdown-preview.png" alt="Markdown example" />
+            <p><cite>From https://mastercaweb.u-strasbg.fr/rediger-web-markdown/</cite></p>
+        </section>
+        <section>
+            <h1>Asciidoc</h1>
+            <img class="stretch" src="img/asciidoc-Big.png" alt="Asciidoc example"  />
+        </section>
+        <section>
+            <h1>Swagger</h1>
+            <img src="img/swagger-ui-screenshot.png" />
+        </section>
+        <section>
+           <h1>Build pipeline As Code</h1>
+            <img class="stretch" src="img/successful-pipeline-OK.png">
+        </section>
+        <section>
             <h1>Infrastructure as code</h1>
             <ul>
-                <li>Dockerfile</li>
-                <li>Docker compose file</li>
                 <li>Puppet recipe</li>
                 <li>Playbook ansible</li>
+                <li>Dockerfile</li>
+                <li>Docker compose file</li>
             </ul>
+        </section>
+        <section>
+            <h1>Puppet</h1>
+            <pre class="stretch"><code data-trim>
+package { 'ssh' :
+    ensure => latest
+}
+
+file { 'sshd_config' :
+    path    => '/etc/ssh/sshd_config',
+    owner   => root,
+    group   => root,
+    require => Package[ssh],
+    notify  => Service[ssh],
+    ...
+}
+
+service { 'ssh' :
+    ensure => running
+}
+            </code></pre>
+            <p><cite>From https://github.com/aestasit.</cite></p>
+        </section>
+        <section>
+            <h1>Puppet</h1>
+            <pre class="stretch"><code data-trim data-noescape>
+package { 'ssh' :
+    ensure => latest
+}
+
+file { 'sshd_config' :
+    path    => '/etc/ssh/sshd_config',
+    owner   => root,
+    group   => root,
+    require => Package[ssh],
+    <mark>notify  => Service[ssh]</mark>,
+    ...
+}
+
+service { 'ssh' :
+    ensure => running
+}
+            </code></pre>
+            <p><cite>From https://github.com/aestasit.</cite></p>
+        </section>
+        <section>
+            <h1>Playbook ansible</h1>
+            <pre class="stretch"><code>
+---
+- hosts: webservers
+  vars:
+    http_port: 80
+    max_clients: 200
+  remote_user: root
+  tasks:
+  - name: ensure apache is at the latest version
+    yum: name=httpd state=latest
+  - name: write the apache config file
+    template: src=/srv/httpd.j2 dest=/etc/httpd.conf
+    notify:
+    - restart apache
+  - name: ensure apache is running (and enable it at boot)
+    service: name=httpd state=started enabled=yes
+  handlers:
+    - name: restart apache
+      service: name=httpd state=restarted
+            </code></pre>
+        </section>
+        <section>
+            <h1>Playbook ansible</h1>
+            <pre class="stretch"><code data-noescape>
+---
+- hosts: webservers
+  vars:
+    http_port: 80
+    max_clients: 200
+  remote_user: root
+  tasks:
+  - name: ensure apache is at the latest version
+    yum: name=httpd state=latest
+  - name: write the apache config file
+    template: src=/srv/httpd.j2 dest=/etc/httpd.conf
+    <mark>notify:
+    - restart apache</mark>
+  - name: ensure apache is running (and enable it at boot)
+    service: name=httpd state=started enabled=yes
+  handlers:
+    - name: restart apache
+      service: name=httpd state=restarted
+            </code></pre>
         </section>
         <section>
             <h1>Dockerfile</h1>
@@ -315,131 +434,8 @@ services:
             </code></pre>
         </section>
         <section>
-            <h1>Puppet</h1>
-            <img class="stretch" src="img/puppet.png" />
-            <p><cite>From https://github.com/aestasit.</cite></p>
-        </section>
-        <section>
-            <h1>Puppet</h1>
-            <pre class="stretch"><code data-trim>
-package { 'ssh' :
-    ensure => latest
-}
-
-file { 'sshd_config' :
-    path    => '/etc/ssh/sshd_config',
-    owner   => root,
-    group   => root,
-    require => Package[ssh],
-    notify  => Service[ssh],
-    ...
-}
-
-service { 'ssh' :
-    ensure => running
-}
-            </code></pre>
-            <p><cite>From https://github.com/aestasit.</cite></p>
-        </section>
-        <section>
-            <h1>Puppet</h1>
-            <pre class="stretch"><code data-trim data-noescape>
-package { 'ssh' :
-    ensure => latest
-}
-
-file { 'sshd_config' :
-    path    => '/etc/ssh/sshd_config',
-    owner   => root,
-    group   => root,
-    require => Package[ssh],
-    <mark>notify  => Service[ssh]</mark>,
-    ...
-}
-
-service { 'ssh' :
-    ensure => running
-}
-            </code></pre>
-            <p><cite>From https://github.com/aestasit.</cite></p>
-        </section>
-        <section>
-            <h1>Playbook ansible</h1>
-            <pre class="stretch"><code>
----
-- hosts: webservers
-  vars:
-    http_port: 80
-    max_clients: 200
-  remote_user: root
-  tasks:
-  - name: ensure apache is at the latest version
-    yum: name=httpd state=latest
-  - name: write the apache config file
-    template: src=/srv/httpd.j2 dest=/etc/httpd.conf
-    notify:
-    - restart apache
-  - name: ensure apache is running (and enable it at boot)
-    service: name=httpd state=started enabled=yes
-  handlers:
-    - name: restart apache
-      service: name=httpd state=restarted
-            </code></pre>
-        </section>
-        <section>
-            <h1>Playbook ansible</h1>
-            <pre class="stretch"><code data-noescape>
----
-- hosts: webservers
-  vars:
-    http_port: 80
-    max_clients: 200
-  remote_user: root
-  tasks:
-  - name: ensure apache is at the latest version
-    yum: name=httpd state=latest
-  - name: write the apache config file
-    template: src=/srv/httpd.j2 dest=/etc/httpd.conf
-    <mark>notify:
-    - restart apache</mark>
-  - name: ensure apache is running (and enable it at boot)
-    service: name=httpd state=started enabled=yes
-  handlers:
-    - name: restart apache
-      service: name=httpd state=restarted
-            </code></pre>
-        </section>
-        <section>
-            <h1>Documentation as code</h1>
-            <ul>
-                <li>Living Documentation</li>
-                <li>Markdown</li>
-                <li>Asciidoc</li>
-                <li>Swagger</li>
-            </ul>
-        </section>
-        <section>
-            <h1>Living Documentation</h1>
-            <img class="stretch" src="img/glossary.jpg" />
-            <p><cite>From <a href="https://leanpub.com/livingdocumentation">https://leanpub.com/livingdocumentation</a> by Cyrille Martraire</cite></p>
-        </section>
-        <section>
-            <h1>Living Documentation</h1>
-            <img class="stretch" src="img/diagram.jpg" />
-            <p><cite>From <a href="https://leanpub.com/livingdocumentation">https://leanpub.com/livingdocumentation</a> by Cyrille Martraire</cite></p>
-        </section>
-        <section>
-            <h1>Markdown</h1>
-            <img class="stretch" src="img/markdown-preview.png" alt="Markdown example" />
-            <p><cite>From https://mastercaweb.u-strasbg.fr/rediger-web-markdown/</cite></p>
-        </section>
-        <section>
-            <h1>Asciidoc</h1>
-            <img class="stretch" src="img/asciidoc-Big.png" alt="Asciidoc example"  />
-        </section>
-        <section>
-            <h1>Swagger</h1>
-            <img src="img/swagger-ui-screenshot.png" />
+            <h1>Biz Dev Ops</h1>
+            <img class="stretch" src="img/testNotPhase.png">
         </section>
         <section>
             <h1>What DevOps ?</h1>
@@ -461,23 +457,20 @@ service { 'ssh' :
             </div>
         </section>
         <section>
-            <img class="stretch" src="img/periodicTable.png">
-            <p><cite>From XebiaLabs https://xebialabs.com/periodic-table-of-devops-tools/.</cite></p>
-        </section>
-        <section>
-            <img class="stretch" src="img/periodicTable-HighLight.png">
-            <p><cite>From XebiaLabs https://xebialabs.com/periodic-table-of-devops-tools/.</cite></p>
-        </section>
-        <section>
-            <h1>Biz Dev Ops</h1>
-            <img class="stretch" src="img/devops.png">
-        </section>
-        <section>
-            <h1>DevOps</h1>
-            <img class="stretch" src="img/testNotPhase.png">
-        </section>
-        <section>
             <h1>Questions ?</h1>
+            <h2>Slides As Code</h2>
+            <pre><code data-trim>
+<section>
+    <h1>Titre</h1>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+</section>
+            </code></pre>
+            <p>
+                <a href="https://github.com/hrambelo/AgileLaval2017">https://github.com/hrambelo/AgileLaval2017</a>
+            </p>
         </section>
         <section>
             <h1>Merci !</h1>
