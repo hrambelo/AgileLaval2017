@@ -1,503 +1,985 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="utf-8">
-
+  <head>
+    <meta charset="utf-8" />
     <title>reveal.js - The HTML Presentation Framework</title>
-
-    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-    <meta name="author" content="Hakim El Hattab">
-
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/beige.css" id="theme">
-
+    <meta content="As Code pour plus de métier"
+          name="description" />
+    <meta content="gcollic &amp; hrambelo"
+          name="author" />
+    <meta content="yes"
+          name="apple-mobile-web-app-capable" />
+    <meta content="black-translucent"
+          name="apple-mobile-web-app-status-bar-style" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"
+          name="viewport" />
+    <link href="img/favicon.ico"
+          rel="icon"
+          type="image/x-icon" />
+    <link href="css/reveal.css"
+          rel="stylesheet" />
+    <link href="css/theme/beige.css"
+          id="theme"
+          rel="stylesheet" />
     <!-- Code syntax highlighting -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
-    <link rel="stylesheet" href="plugin/title-footer/title-footer.css">
-
+    <link href="lib/css/zenburn.css"
+          rel="stylesheet" />
+    <link href="plugin/title-footer/title-footer.css"
+          rel="stylesheet" />
     <!-- Printing and PDF exports -->
-    <script>
-        var link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
-        document.getElementsByTagName('head')[0].appendChild(link);
-    </script>
-
+    <script>var link = document.createElement('link'); link.rel = 'stylesheet'; link.type = 'text/css'; link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);</script>
     <!--[if lt IE 9]>
     <script src="lib/js/html5shiv.js"></script>
     <![endif]-->
     <style>
-        cite {
-            font-style: italic;
-        }
-        .reveal ul > li > ul > li {
-            font-size: 0.5em !important;
-        }
-        #title-footer {
-            z-index: 0;
-        }
+      cite { font-style: italic; }
+      .reveal ul > li > ul > li { font-size: 0.5em !important; }
+      #title-footer { z-index: 0; }
     </style>
-</head>
-
-<body>
-
-<div class="reveal">
-        <footer style="background:rgba(219,120,39,1)" id="title-footer">
-                <p class="atLeft"><b>#AgileTourRennes2017</b></p>
-                <p class="atRight"><b>@gcollic - @hrambelo</b></p>
-            </footer>
-    <!-- Any section element inside of this container is displayed as a slide -->
-    <div class="slides">
-
+  </head>
+  <body>
+    <div class="reveal">
+      <footer id="title-footer"
+              style="background:rgba(219,120,39,1)">
+        <p class="atLeft">
+          <b>#AgileTourRennes2017</b>
+        </p>
+        <p class="atRight">
+          <b>@gcollic - @hrambelo</b>
+        </p>
+      </footer>
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
         <section class="center">
-            <h1>Mon équipe se focalise sur <br/> la <b>valeur métier</b> <br/> ... grâce au <b>code</b></h1>
-            <br/>
-            <p>
-                <a href="http://www.twitter.com/hrambelo">@hrambelo</a> -
-                <a href="http://www.twitter.com/gcollic">@gcollic</a>
-            </p>
+          <h1>Mon équipe se focalise sur 
+          <br />la 
+          <b>valeur métier</b>
+          <br />... grâce au 
+          <b>code</b></h1>
+          <br />
+          <p>
+          <a href="http://www.twitter.com/hrambelo">@hrambelo</a>- 
+          <a href="http://www.twitter.com/gcollic">@gcollic</a></p>
         </section>
-        <section class="center">
-            <h1>Il était une fois</h1>
-            <h2>Une équipe réalisant du logiciel</h2>
-            <h2>Qui voulait livrer de la <b>valeur métier</b></h2>
-            <h2>aussi <b>fréquemment</b> que possible</h2>
-        </section>
-        <section class="center">
-            <h1>&lt; nous /&gt;</h1>
-            <img src="img/atr17/avatarGCollic.png" />
-            <img src="img/atr17/avatar.png" />
+        <section>
+          <img class="stretch"
+               src="img/merci-sponsor.png" />
         </section>
         <section class="center">
-            <h1>Chapitre 0</h1>
-            <h2>Le roi est mort</h2>
-        </section>
-        <section>
-            <h1>Cycle en V avant 1995 ...</h1>
-            <ul>
-                <li>Livraisons tous les ~ 2 ans</li>
-                <li>Avec + ou - de succès</li>
-            </ul>
-            <div class="clear" />
-            <img class="stretch" src="img/atr17/princebelair.jpg">
-        </section>
-        <section>
-            <h1>Problème ...</h1>
-            <ul>
-                <li>Innovation
-                    <ul>
-                        <li>Incertitudes métiers</li>
-                        <li>Incertitudes techniques</li>
-                    </ul>
-                </li>
-                <li>Marché évoluant de + en + vite
-                    <ul>
-                        <li>Obsolescence des besoins initiaux</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-        <section>
-            <h1>... Solution</h1>
-            <h2>XP ou Scrum à la rescousse</h2>
-            <ul>
-                <li>Découpage des besoins
-                    <ul>
-                        <li>En usage métiers indépendants</li>
-                    </ul>
-                </li>
-                <li>Livraisons fréquentes
-                    <ul>
-                        <li>Validation continue</li>
-                        <li>Repriorisation continue</li>
-                    </ul>
-                </li>
-            </ul>
+          <h1>Il était une fois</h1>
+          <h2>Une équipe réalisant du logiciel</h2>
+          <h2>Qui voulait livrer de la 
+          <b>valeur métier</b></h2>
+          <h2>aussi 
+          <b>fréquemment</b>que possible</h2>
         </section>
         <section class="center">
-            <h1>… mais ce ne fût pas si facile de détroner le roi</h1>
-            <img class="stretch" src="img/atr17/dethrone.jpg">
+          <h1>&lt; nous /&gt;</h1>
+          <img src="img/atr17/avatarGCollic.png" />
+          <img src="img/atr17/avatar.png" />
         </section>
         <section class="center">
-            <h1>Chapitre I</h1>
-            <h2>livrer plus fréquemment, c’est pas si facile</h2>
+          <h1>Chapitre 0</h1>
+          <h2>Le roi est mort</h2>
         </section>
         <section>
-            <h1>Recette</h1>
+          <h1>Cycle en V avant 1995 ...</h1>
+          <ul>
+            <li>Livraisons tous les ~ 2 ans</li>
+            <li>Avec + ou - de succès</li>
+          </ul>
+          <div class="clear" />
+          <img class="stretch"
+               src="img/atr17/princebelair.jpg" />
+        </section>
+        <section>
+          <h1>Problème ...</h1>
+          <ul>
+            <li>Innovation 
             <ul>
-                <li>Comment faire une recette d’un mois…</li>
-                <li>…toutes les 2 semaines</li>
-            </ul>
-        </section>
-        <section>
-            <h1>Automatisation des tests !</h1>
+              <li>Incertitudes métiers</li>
+              <li>Incertitudes techniques</li>
+            </ul></li>
+            <li>Marché évoluant de + en + vite 
             <ul>
-                <li>Gain de temps</li>
-                <li>Reproductible</li>
-            </ul>
+              <li>Obsolescence des besoins initiaux</li>
+            </ul></li>
+          </ul>
         </section>
         <section>
-            <h1>Livraisons fiables</h1>
+          <h1>... Solution</h1>
+          <h2>XP ou Scrum à la rescousse</h2>
+          <ul>
+            <li>Découpage des besoins 
             <ul>
-                <li>Comment livrer toutes les 2 semaines…</li>
-                <li>…fiablement</li>
-            </ul>
-        </section>
-        <section>
-            <h1>Exemple</h1>
-            <img class="stretch" src="img/atr17/publish.png">
-        </section>
-        <section>
-            <h1>Industrialisation (XP)</h1>
+              <li>En usage métiers indépendants</li>
+            </ul></li>
+            <li>Livraisons fréquentes 
             <ul>
-                <li>Gestion de source</li>
-                <li>Automatisation du build</li>
-                <li>Automatisation packaging du produit</li>
-                <li>Intégration continue</li>
-            </ul>
-        </section>
-        <section>
-            <h1>Bénéfices</h1>
-            <ul>
-                <li>Gain de temps</li>
-                <li>Reproductible, avec fiabilité</li>
-            </ul>
+              <li>Validation continue</li>
+              <li>Repriorisation continue</li>
+            </ul></li>
+          </ul>
         </section>
         <section class="center">
-            <h1>1995 : Youpi !</h1>
-            <ul>
-                <li>Livraison de valeur métier
-                <ul><li>Passe de 2 ans à 2 semaines !</li></ul>
-                </li>
-            </ul>
+          <h1>… mais ce ne fût pas si facile de détroner le roi</h1>
+          <img class="stretch"
+               src="img/atr17/dethrone.jpg" />
         </section>
         <section class="center">
-            <h1>Chapitre II</h1>
-            <h2>Un nouveau roi, de nouveaux problèmes</h2>
+          <h1>Chapitre I</h1>
+          <h2>livrer plus fréquemment, c’est pas si facile</h2>
+        </section>
+        <section>
+          <h1>Recette</h1>
+          <ul>
+            <li>Comment faire une recette d’un mois…</li>
+            <li>…toutes les 2 semaines</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Automatisation des tests !</h1>
+          <ul>
+            <li>Gain de temps</li>
+            <li>Reproductible</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Livraisons fiables</h1>
+          <ul>
+            <li>Comment livrer toutes les 2 semaines…</li>
+            <li>…fiablement</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Exemple</h1>
+          <img class="stretch"
+               src="img/atr17/publish.png" />
+        </section>
+        <section>
+          <h1>Industrialisation (XP)</h1>
+          <ul>
+            <li>Gestion de source</li>
+            <li>Automatisation du build</li>
+            <li>Automatisation packaging du produit</li>
+            <li>Intégration continue</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Bénéfices</h1>
+          <ul>
+            <li>Gain de temps</li>
+            <li>Reproductible, avec fiabilité</li>
+          </ul>
         </section>
         <section class="center">
-            <h1>Livrer à la fin de chaque itération</h1>
+          <h1>1995 : Youpi !</h1>
+          <ul>
+            <li>Livraison de valeur métier 
             <ul>
-                <li>Tout ce qui marche</li>
-                <li>Rien que ce qui marche</li>
-            </ul>
-        </section>
-        <section>
-            <h1>Cohérence du livrable ?</h1>
-            <ul>
-                <li>Plusieurs fonctionnalités en parrallèles</li>
-                <li>Touchant toute à la BDD</li>
-                <li>Certaines ne sont pas validées en fin d’itération</li>
-                <li>Comment livrer l’intégralité de ce qui est prêt sans être géné par le reste ?</li>
-            </ul>
-        </section>
-        <section>
-            <h1>Regrouper !</h1>
-            <ul>
-                <li>Branche technique pour chaque fonctionnalité métier</li>
-                <li>Inclure avec le code tout ce qui est nécessaire à son bon fonctionnement
-                    <ul>
-                        <li>Scripts d’évolution de base de donnée à côté du code</li>
-                        <li>On prend tout ou rien, c’est
-                        cohérent</li>
-                        <li>Exemples : Scripts manuels, migrations géré par les ORMs, Liquibase/Dacpac/etc</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-        <section>
-            <h1>Bénéfices</h1>
-            <ul>
-                <li>Meilleure interaction dev/ops
-                    <ul><li>Les ops sont sûr de mettre en production la bonne base avec le bon code</li></ul>
-                </li>
-                <li>Cohérent</li>
-                <li>Reproductible</li>
-            </ul>
+              <li>Passe de 2 ans à 2 semaines !</li>
+            </ul></li>
+          </ul>
         </section>
         <section class="center">
-            <h1>Chapitre III</h1>
-            <h2>Remise en question du nouveau roi</h2>
+          <h1>Chapitre II</h1>
+          <h2>Un nouveau roi, de nouveaux problèmes</h2>
+        </section>
+        <section class="center">
+          <h1>Livrer à la fin de chaque itération</h1>
+          <ul>
+            <li>Tout ce qui marche</li>
+            <li>Rien que ce qui marche</li>
+          </ul>
         </section>
         <section>
-            <h1>2 semaines ?</h1>
+          <h1>Cohérence du livrable ?</h1>
+          <ul>
+            <li>Plusieurs fonctionnalités en parrallèles</li>
+            <li>Touchant toute à la BDD</li>
+            <li>Certaines ne sont pas validées en fin d’itération</li>
+            <li>Comment livrer l’intégralité de ce qui est prêt sans être géné par le reste ?</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Regrouper !</h1>
+          <ul>
+            <li>Branche technique pour chaque fonctionnalité métier</li>
+            <li>Inclure avec le code tout ce qui est nécessaire à son bon fonctionnement 
             <ul>
-                <li>Anomalie urgente en production</li>
-                <li>Fonctionnalité validée en cours d'itération</li>
-                <li><i>Pourquoi attendre 2 semaines ???</i></li>
-                <li>Spotify, GAFA, NATU, ...</li>
-            </ul>
+              <li>Scripts d’évolution de base de donnée à côté du code</li>
+              <li>On prend tout ou rien, c’est cohérent</li>
+              <li>Exemples : Scripts manuels, migrations géré par les ORMs, Liquibase/Dacpac/etc</li>
+            </ul></li>
+          </ul>
         </section>
         <section>
-            <h1>Solutions</h1>
+          <h1>Bénéfices</h1>
+          <ul>
+            <li>Meilleure interaction dev/ops 
             <ul>
-                <li>Métier
-                    <ul><li>Kanban</li></ul>
-                </li>
-                <li>Technique
-                    <ul><li>?</li></ul>
-                </li>
-            </ul>
+              <li>Les ops sont sûr de mettre en production la bonne base avec le bon code</li>
+            </ul></li>
+            <li>Cohérent</li>
+            <li>Reproductible</li>
+          </ul>
+        </section>
+        <section class="center">
+          <h1>Chapitre III</h1>
+          <h2>Remise en question du nouveau roi</h2>
         </section>
         <section>
-            <h1>Enjeu</h1>
+          <h1>2 semaines ?</h1>
+          <ul>
+            <li>Anomalie urgente en production</li>
+            <li>Fonctionnalité validée en cours d'itération</li>
+            <li>
+              <i>Pourquoi attendre 2 semaines ???</i>
+            </li>
+            <li>Spotify, GAFA, NATU, ...</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Solutions</h1>
+          <ul>
+            <li>Métier 
             <ul>
-                <li>Reproduire
-                    <ul>
-                        <li>Le succès 2 ans -&gt; 2 semaines</li>
-                        <li>En succès 2 semaines -&gt; 2 heures</li>
-                    </ul>
-                </li>
-            </ul>
-            <img src="img/atr17/belAirvsNow.jpg" class="stretch">
-        </section>
-
-        <section>
-            <h1>Environnement de dév. différent de la prod.</h1>
+              <li>Kanban</li>
+            </ul></li>
+            <li>Technique 
             <ul>
-                <li>Quelles dépendances installées ?</li>
-                <li>Dans quelles versions ?</li>
-                <li>etc</li>
-                <li>1 semaine pour mettre un environnement d’équerre</li>
-            </ul>
+              <li>?</li>
+            </ul></li>
+          </ul>
         </section>
         <section>
-            <h1>Infrastructure As Code !</h1>
-            <h2>Outils de provisionning</h2>
-            <pre>
+          <h1>Enjeu</h1>
+          <ul>
+            <li>Reproduire 
+            <ul>
+              <li>Le succès 2 ans -&gt; 2 semaines</li>
+              <li>En succès 2 semaines -&gt; 2 heures</li>
+            </ul></li>
+          </ul>
+          <img class="stretch"
+               src="img/atr17/belAirvsNow.jpg" />
+        </section>
+        <section>
+          <h1>Environnement de dév. différent de la prod.</h1>
+          <ul>
+            <li>Quelles dépendances installées ?</li>
+            <li>Dans quelles versions ?</li>
+            <li>etc</li>
+            <li>1 semaine pour mettre un environnement d’équerre</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Infrastructure As Code !</h1>
+          <h2>Outils de provisionning</h2>
+          <pre>
 <code>package { 'openssh':
-    ensure => present,
-}</code></pre>
-            <ul>
-                <li>Mettre avec le code tout ce qui est nécessaire à son bon fonctionnement</li>
-                <li>Présent avec le code dans la branche de gestion de version</li>
-            </ul>
+    ensure =&gt; present,
+}</code>
+</pre>
+          <ul>
+            <li>Mettre avec le code tout ce qui est nécessaire à son bon fonctionnement</li>
+            <li>Présent avec le code dans la branche de gestion de version</li>
+          </ul>
         </section>
         <section>
-            <h1>Bénéfices</h1>
-            <ul>
-                <li>Auditable</li>
-                <li>Meilleure interaction dev/ops</li>
-                <li>Cohérent</li>
-                <li>Reproductible</li>
-            </ul>
+          <h1>Bénéfices</h1>
+          <ul>
+            <li>Auditable</li>
+            <li>Meilleure interaction dev/ops</li>
+            <li>Cohérent</li>
+            <li>Reproductible</li>
+          </ul>
         </section>
-
         <section class="center">
-                <h1>2010 : Youpi !</h1>
+          <h1>2010 : Youpi !</h1>
+          <ul>
+            <li>Livraison de valeur métier 
+            <ul>
+              <li>Passe de 2 semaines à 2 heures !</li>
+            </ul></li>
+          </ul>
+        </section>
+        <section class="center">
+          <h1>The end</h1>
+        </section>
+        <section class="center">
+          <h1>Épilogue</h1>
+          <h2>Morale de l'histoire</h2>
+        </section>
+        <section class="center">
+          <h1>Ce qu'on a vu</h1>
+          <ul>
+            <li>Sujets variés</li>
+            <li>Bénéfices proches 
+            <ul>
+              <li>Gain de temps</li>
+              <li>Déterminismes</li>
+              <li>…</li>
+            </ul></li>
+          </ul>
+        </section>
+        <section class="center">
+          <h1>Sens de l'Histoire</h1>
+          <ul>
+            <li>De : projet d'un seul bloc</li>
+            <li>Vers : projet en petits blocs</li>
+            <li>Implique : itérations et incréments</li>
+            <li>Implique : Répétition des tâches</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Boucle de feedback</h1>
+          <img class="stretch"
+               src="img/feedbackloop.png" />
+        </section>
+        <section>
+          <h1>Biz Dev Ops (*)</h1>
+          <img class="stretch"
+               src="img/testNotPhase.png" />
+        </section>
+        <section class="center">
+          <h1>Sens de l'Histoire</h1>
+          <ul>
+            <li>Répétition des tâches</li>
+            <li>Implique : Automatisation</li>
+            <li>Implique : Code</li>
+          </ul>
+        </section>
+        <section class="center">
+          <h1>Bénéfices rencontrés dans l'histoire ?</h1>
+          <ul>
+            <li>Les bénéfices intrinsèques au code !</li>
+          </ul>
+        </section>
+        <section class="center">
+          <h1>De plus en plus de code pour plus d'impact métier</h1>
+          <ul>
+            <li>Exemple 
+            <ul>
+              <li>Le changement stratégique des outils Microsoft</li>
+            </ul></li>
+          </ul>
+        </section>
+        <section class="center">
+          <h1>Pratiques basées sur le code ?</h1>
+          <h2>2 axes de lectures</h2>
+          <ul>
+            <li>Quels sont leurs bénéfices communs ?</li>
+            <li>Quelles sont ces pratiques ?</li>
+          </ul>
+        </section>
+        <section class="center">
+          <h1>Code ?</h1>
+          <ul>
+            <li>Fichier texte</li>
+            <li>Langages éxécutables, au sens large 
+            <ul>
+              <li>Langages de programmation</li>
+              <li>Langages déclaratifs</li>
+            </ul></li>
+          </ul>
+        </section>
+        <section class="center">
+          <h1>Bénéfices du code</h1>
+          <h2>Communs à toutes les pratiques</h2>
+        </section>
+        <section class="center">
+          <h1>Tout est gain de temps, indirectement</h1>
+        </section>
+        <section class="center">
+          <ul>
+            <li>Gain de temps directs : automatisation 
+            <ul>
+              <li>La 1ère fois coûte plus cher</li>
+              <li>Les suivantes sont quasi gratuites</li>
+              <li>Permet de faire les choses plus souvent 
+              <ul>
+                <li>Raccourcissement des boucles de feedbacks</li>
+              </ul></li>
+              <li>Permet de faire les choses à plus grande échelle 
+              <ul>
+                <li>Automatiser l’installation d’un serveur permet de rapidement en déployer des dizaines</li>
+              </ul></li>
+            </ul></li>
+          </ul>
+        </section>
+        <section class="center">
+          <ul>
+            <li>Garder la maitrise !</li>
+          </ul>
+        </section>
+        <section class="center">
+          <ul>
+            <li>Pas d’automatisation 
+            <ul>
+              <li>Image temps modernes : Fordisme</li>
+              <li>Installer à la main chaque machine virtuelle</li>
+            </ul></li>
+          </ul>
+        </section>
+        <section class="center">
+          <ul>
+            <li>“Automatisation bête” sans code 
+            <ul>
+              <li>Installer à la main d’un serveur</li>
+              <li>En faire une image copie</li>
+              <li>Repartir de cette copie à chaque nouvelle installation</li>
+            </ul></li>
+            <li>Problème 
+            <ul>
+              <li>Changement incompatible avec l’image (changement d’OS, etc)</li>
+              <li>Comment on avait installé la première VM déjà ?</li>
+            </ul></li>
+          </ul>
+        </section>
+        <section class="center">
+          <ul>
+            <li>Automatisation par le code 
+            <ul>
+              <li>Provisionning par fichier 
+              <ul>
+                <li>Puppet, ansible, saltstack, …</li>
+                <li>Docker</li>
+              </ul></li>
+            </ul></li>
+          </ul>
+        </section>
+        <section class="center">
+          <ul>
+            <li>Autonomation 
+            <ul>
+              <li>Notion Lean (Toyota)</li>
+              <li>Automatiser pour décupler les capacités de l’opérateur</li>
+              <li>Pas de feedback, pas d’amélioration</li>
+              <li>Ne pas remplacer l’intelligence de l’opérateur par une machine</li>
+            </ul></li>
+          </ul>
+        </section>
+        <section class="center">
+          <ul>
+            <li>Man vs Computer</li>
+          </ul>
+        </section>
+        <section class="center">
+          <ul>
+              <li>Un ordinateur, c’est bête et méchant 
+              <ul>
+                <li>Ça fait exactement ce qu’on lui dit</li>
+                <li>Mais il faut être précis</li>
+                <li>Sinon il nous le dit</li>
+              </ul></li>
+          </ul>
+        </section>
+        <section class="center">
+          <ul>
+            <li>Un humain, c’est intelligent et inattendu 
+            <ul>
+              <li>Si on est ambigüe 
+              <ul>
+                <li>Il corrigera parfois le tir, en bien ou en mal</li>
+              </ul></li>
+              <li>Si notre document est sans ambigüité 
+              <ul>
+                <li>Il ne le suivra peut être pas</li>
+                <li>À tort ou à raison</li>
+              </ul></li>
+              <li>Il ne nous préviendra pas forcément 
+              <ul>
+                <li>“C’est évident !”</li>
+              </ul></li>
+            </ul></li>
+          </ul>
+      </section>
+      <section class="center">
+        <ul>
+            <li>Le code documente</li>
+        </ul>
+      </section>
+      <section class="center">
+        <ul>
+              <li>Véracité des informations 
+              <ul>
+                <li>Un doc peut être ambigüe, le code ne l’est pas</li>
+                <li>Un document peut être erroné 
                 <ul>
-                    <li>Livraison de valeur métier
-                    <ul><li>Passe de 2 semaines à 2 heures !</li></ul>
-                    </li>
-                </ul>
-            </section>
-        <section>
-            <h1>TDD</h1>
-            <img class="stretch" src="img/tdd-simple.svg">
-            <p><cite>From Growing Object-Oriented Software by Nat Pryce and Steve Freeman.</cite></p>
+                  <li>Il est écrit qu’il faut faire A puis B</li>
+                  <li>“Ah oui ça dit ça ? J’ai l’habitude, du coup je regarde plus la doc.”</li>
+                  <li>“Non mais oui, on devrait faire comme ça mais depuis la mise à jour il faut faire dans l’autre sens”</li>
+                </ul></li>
+                <li>Le code ne ment pas 
+                <ul>
+                  <li>Si le script de déploiement contient l’action A puis B, il le fait</li>
+                </ul></li>
+              </ul></li>
+            </ul>
+          </section>
+          <section class="center">
+            <ul>
+              <li>Pérénité des informations 
+              <ul>
+                <li>Anecdote 
+                <ul>
+                  <li>Mise en place d’un environnement de dev pour firmware de clavier</li>
+                  <li>Tous les 2 ans 
+                  <ul>
+                    <li>J’oubli !</li>
+                  </ul></li>
+                  <li>Dockerfile à la rescousse 
+                  <ul>
+                    <li>https://github.com/gcollic/Grimoire60_keyboard/blob/master/firmware/Dockerfile</li>
+                  </ul></li>
+                </ul></li>
+                <li>La documentation sous forme papier 
+                <ul>
+                  <li>Est vite obsolète ou côute cher à maintenir pour ne pas l’être</li>
+                </ul></li>
+              </ul></li>
+            </ul>
+          </section>
+          <section class="center">
+            <ul>
+              <li>Attention 
+              <ul>
+                <li>Un code crade n’a jamais rien documenté !</li>
+                <li>Les pratiques “As Code” suppose du code clair et lisible ! 
+                <ul>
+                  <li>Bien choisir ces outils</li>
+                  <li>Les pratiques de clean code s’appliquent !</li>
+                </ul></li>
+              </ul></li>
+          </ul>
+        </section>
+        <section class="center">
+          <ul>
+            <li>Le code est versionnable</li>
+          </ul>
+        </section>
+        <section class="center">
+          <ul>
+              <li>Intégration métier de A à Z 
+              <ul>
+                <li>Si on travail sur les fonctionnalités A et B</li>
+                <li>Quand A est finie et validée, mais pas B, il faut tout mettre à jour pour que sur la version courante tout soit cohérent 
+                <ul>
+                  <li>Code de l’application</li>
+                  <li>Schéma de la base de donnée</li>
+                  <li>Test unitaires</li>
+                  <li>Autres tests</li>
+                  <li>Documentation technique</li>
+                  <li>Documentation métier (spécifications)</li>
+                  <li>etc, etc</li>
+                </ul></li>
+                <li>Si tout est sous forme textuelle, dans la même gestion de source, il suffit de fusionner les branches et tout est alors cohérent et à jour</li>
+              </ul></li>
+              <li>Pull-request</li>
+              <li>Cherry-picking</li>
+              <li>Auditabilité des informations 
+              <ul>
+                <li>Permet de savoir exactement au fil du temps comment fonctionnait les choses</li>
+              </ul></li>
+            </ul></li>
+          </ul>
+        </section>
+        <section class="center">
+          <ul>
+            <li>Le code est déterministe </li>
+          </ul>
+        </section>
+        <section class="center">
+          <ul>
+            <li>À contexte identique, l’ordinateur refera tout le temps la même chose 
+            <ul>
+              <li>Astuce : rendre le contexte le plus déterministe possible 
+              <ul>
+                <li>Fixer les dépendances 
+                <ul>
+                  <li>Exemple NPM et/ou github</li>
+                </ul></li>
+              </ul></li>
+            </ul></li>
+          </ul>
+        </section>
+        <section class="center">
+          <ul>
+            <li>Modularité</li>
+          </ul>
+        </section>
+        <section class="center">
+          <ul>
+              <li>C’est l’automatisation d’éléments de base qui nous a permis d’aller plus loin</li>
+              <li>Et qui nous permettra d’aller encore plus loin</li>
+              <li>Exemple de la chaîne de déploiement 
+              <ul>
+                <li>Automatisation de 
+                <ul>
+                  <li>la compilation</li>
+                  <li>le déploiement</li>
+                  <li>l’installation des pré-requis sur la machine virtuelle</li>
+                  <li>la création de la machine virtuelle</li>
+                  <li>la mise en place de l’infrastructure complète</li>
+                </ul></li>
+                <li>Et demain ?</li>
+              </ul></li>
+            </ul>
+          </section>
+          <section class="center">
+            <ul>
+            <li>Sum up 
+            <ul>
+              <li>Gain de temps</li>
+              <li>Informations 
+              <ul>
+                <li>Partageables</li>
+                <li>Véridiques</li>
+                <li>Pérennes</li>
+                <li>Auditables</li>
+              </ul></li>
+              <li>Déterministe</li>
+              <li>Fusionnables et livrables par incréments cohérents</li>
+            </ul></li>
+            <li>Pourquoi c’est important ? 
+            <ul>
+              <li>Se concentrer sur le métier</li>
+            </ul></li>
+          </ul>
+        </section>
+        <section class="center">
+          <h1>Pratiques basées sur le code</h1>
+        </section>
+        <section class="center">
+          <h1 id="du-code-partout">Du code partout ?</h1>
+          <ul>
+            <li>Toutes les parties 
+            <ul>
+              <li>Spec</li>
+              <li>Build</li>
+              <li>Test</li>
+              <li>Deliver</li>
+            </ul></li>
+          </ul>
+        </section>
+        <section class="center">
+          <ul>
+            <li>Specs fonctionnelles 
+            <ul>
+              <li>Spec as examples 
+              <ul>
+                <li>cf slides Laval</li>
+              </ul></li>
+            </ul></li>
+          </ul>
+        </section>
+        <section class="center">
+          <ul>
+            <li>Build 
+            <ul>
+              <li>Chaîne de compilation</li>
+              <li>Configuration d’un job de l’intégration continue ! 
+              <ul>
+                <li>Jenkins et TFS/VSTS sont tous les 2 passé de modéle IHM vers As Code</li>
+              </ul></li>
+              <li>Configuration de la pipeline entière de l’intégration continue</li>
+            </ul></li>
+          </ul>
+        </section>
+        <section class="center">
+          <ul>
+            <li>Tests unitaires 
+            <ul>
+              <li></li>
+            </ul></li>
+          </ul>
+        </section>
+        <section class="center">
+          <ul>
+            <li>Doc technique 
+            <ul>
+              <li>Swagger</li>
+              <li>AsciiDoc</li>
+              <li>Exemple de la doc GitHub 
+              <ul>
+                <li>Juste un dépôt git à coté !</li>
+                <li>Super facile pour collaborer</li>
+              </ul></li>
+            </ul></li>
+          </ul>
+        </section>
+        <section class="center">
+          <ul>
+            <li>Tests intégrations 
+            <ul>
+              <li>Exemple : Xamarin Test Cloud 
+              <ul>
+                <li>Un scénario de test sur X devices du marché</li>
+              </ul></li>
+            </ul></li>
+          </ul>
+        </section>
+        <section class="center">
+          <ul>
+            <li>BDD 
+            <ul>
+              <li>Schéma et data d’initialisation as code 
+              <ul>
+                <li>ORM de plus en plus Code First</li>
+                <li>ORM avec migrations automatique</li>
+                <li>Liquibase, DACPAC, …</li>
+              </ul></li>
+            </ul></li>
+          </ul>
+        </section>
+        <section class="center">
+          <ul>
+            <li>Delivery 
+            <ul>
+              <li>Puppet, ansible, saltstack</li>
+              <li>Docker</li>
+              <li>Let’s encrypt</li>
+            </ul></li>
+          </ul>
+        </section>
+        <section class="center">
+          <ul>
+            <li>Modélisation 3D 
+            <ul>
+              <li>OpenScad 
+              <ul>
+                <li>Image à prendre de ma présentation sur le sujet</li>
+              </ul></li>
+            </ul></li>
+          </ul>
+        </section>
+        <section class="center">
+          <ul>
+            <li>Slides 
+            <ul>
+              <li>Source de la slide de la slide ;-)</li>
+            </ul></li>
+          </ul>
+        </section>
+        <section class="center">
+          <h1 id="conclusion-5-min">Conclusion : 5 min</h1>
+          <ul>
+            <li>Conclusion 
+            <ul>
+              <li>Moins de problèmes à gérer</li>
+              <li>Moins de temps à passer sur les tâches répétitives</li>
+              <li>Plus de % de temps à se concentrer sur la valeur métier !</li>
+            </ul></li>
+          </ul>
+        </section>
+        <section class="center">
+          <ul>
+            <li>Chaque déploiement est une chance d’avoir du feedback</li>
+            <li>Chaque fois qu’on peut faire un déploiement pour corriger qq chose, rajouter qq chose, mettre à jour qq chose c’est rajouter de la felxibilité (responsivity) pour toutes les parties prenantes 
+            <ul>
+              <li>=&gt; aller en prod dès le début pour Année -&gt; mois -&gt; semaine -&gt; jour -&gt; heure grace au As Code</li>
+            </ul></li>
+          </ul>
+        </section>
+        <section class="center">
+          <ul>
+            <li>Yes we can (tout le monde peut coder ?)</li>
+          </ul>
+        </section>
+        <section class="center">
+          <ul>
+            <li>Merci ! Questions ? 
+            <ul>
+              <li>Liens vers contenu slides</li>
+              <li>Rappel de nos noms</li>
+            </ul></li>
+          </ul>
         </section>
         <section>
-            <h1>ATDD</h1>
-            <img class="stretch" src="img/tdd-with-acceptance-tests.svg">
-            <p><cite>From Growing Object-Oriented Software by Nat Pryce and Steve Freeman.</cite></p>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
         </section>
         <section>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <h1>Feedback</h1>
-        </section>
-        <section>
-            <img class="stretch" src="img/feedbackloop.png">
-        </section>
-       <section>
           <h1>Intégration Continue</h1>
-          <img class="stretch" src="img/successful-pipeline-OK.png">
-       </section>
-        <section>
-           <h1>Intégration Continue</h1>
-            <img class="stretch" src="img/failed-pipeline-KO.png">
+          <img class="stretch"
+               src="img/successful-pipeline-OK.png" />
         </section>
         <section>
-           <h1>Intégration Continue</h1>
-            <img class="stretch" src="img/successful-pipeline-OK.png">
+          <h1>Intégration Continue</h1>
+          <img class="stretch"
+               src="img/failed-pipeline-KO.png" />
         </section>
         <section>
-            <h1>Le test automatique</h1>
-            <ul>
-                <li>Ne coûte pas plus cher à être exécuté plus souvent</li>
-                <li>Communique et documente comment les choses fonctionnent</li>
-                <li>Correspond vraiment à ce qui est fait (obsolescence de l'écrit)</li>
-                <li>Est plus déterministe qu'un humain</li>
-                <li>Est versionnable !</li>
-            </ul>
+          <h1>Intégration Continue</h1>
+          <img class="stretch"
+               src="img/successful-pipeline-OK.png" />
         </section>
         <section>
-            <h1>Le build automatique</h1>
-            <ul>
-                <li>Ne coûte pas plus cher à être exécuté plus souvent</li>
-                <li>Communique et documente comment les choses fonctionnent</li>
-                <li>Correspond vraiment à ce qui est fait (obsolescence de l'écrit)</li>
-                <li>Est plus déterministe qu'un humain</li>
-                <li>Est versionnable !</li>
-            </ul>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <h1>
+          <em>"As Code"</em>
+          <br />eats the World</h1>
         </section>
         <section>
-            <h1><em>Le code !</em></h1>
-            <ul>
-                <li>Ne coûte pas plus cher à être exécuté plus souvent</li>
-                <li>Communique et documente comment les choses fonctionnent</li>
-                <li>Correspond vraiment à ce qui est fait (obsolescence de l'écrit)</li>
-                <li>Est plus déterministe qu'un humain</li>
-                <li>Est versionnable !</li>
-            </ul>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <ul>
+            <li>Specification As Code (BDD/ATDD)</li>
+            <li>Documentation As Code</li>
+            <li>Build Pipeline As Code</li>
+            <li>Infrastructure As Code</li>
+            <li>...</li>
+          </ul>
         </section>
         <section>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <h1><em>"As Code"</em> <br/> eats the World</h1>
+          <h1>ALL THE THINGS As Code</h1>
+          <img class="stretch"
+               src="img/allthethings.jpg" />
         </section>
         <section>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <ul>
-                <li>Specification As Code (BDD/ATDD)</li>
-                <li>Documentation As Code</li>
-                <li>Build Pipeline As Code</li>
-                <li>Infrastructure As Code</li>
-                <li>...</li>
-            </ul>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <h1>Specification As Code</h1>
         </section>
         <section>
-            <h1>Biz Dev Ops (*)</h1>
-            <img class="stretch" src="img/testNotPhase.png">
-            <p><cite>* From yesterday's #devopsnight</cite></p>
+          <img class="stretch"
+               src="img/specs.png" />
+          <p>
+            <cite>From Specification By Example by Gojko Adzic.</cite>
+          </p>
+        </section>
+        <section data-background="img/gherkin.png"></section>
+        <section>
+          <h1>Documentation as code</h1>
+          <ul>
+            <li>Living Documentation</li>
+            <li>Markdown</li>
+            <li>Asciidoc</li>
+            <li>Swagger</li>
+          </ul>
         </section>
         <section>
-            <h1>ALL THE THINGS As Code</h1>
-            <img class="stretch" src="img/allthethings.jpg">
+          <h1>Living Documentation</h1>
+          <img class="stretch"
+               src="img/glossary.jpg" />
+          <p>
+            <cite>From 
+            <a href="https://leanpub.com/livingdocumentation">https://leanpub.com/livingdocumentation</a>by Cyrille Martraire</cite>
+          </p>
         </section>
         <section>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <h1>Specification As Code</h1>
+          <h1>Living Documentation</h1>
+          <img class="stretch"
+               src="img/diagram.jpg" />
+          <p>
+            <cite>From 
+            <a href="https://leanpub.com/livingdocumentation">https://leanpub.com/livingdocumentation</a>by Cyrille Martraire</cite>
+          </p>
         </section>
         <section>
-            <img class="stretch" src="img/specs.png">
-            <p><cite>From Specification By Example by Gojko Adzic.</cite></p>
-        </section>
-        <section  data-background="img/gherkin.png">
-        </section>
-        <section>
-            <h1>Documentation as code</h1>
-            <ul>
-                <li>Living Documentation</li>
-                <li>Markdown</li>
-                <li>Asciidoc</li>
-                <li>Swagger</li>
-            </ul>
+          <h1>Markdown</h1>
+          <img alt="Markdown example"
+               class="stretch"
+               src="img/markdown-preview.png" />
+          <p>
+            <cite>From https://mastercaweb.u-strasbg.fr/rediger-web-markdown/</cite>
+          </p>
         </section>
         <section>
-            <h1>Living Documentation</h1>
-            <img class="stretch" src="img/glossary.jpg" />
-            <p><cite>From <a href="https://leanpub.com/livingdocumentation">https://leanpub.com/livingdocumentation</a> by Cyrille Martraire</cite></p>
+          <h1>Asciidoc</h1>
+          <img src="img/asciidoc-Big.png" />
         </section>
         <section>
-            <h1>Living Documentation</h1>
-            <img class="stretch" src="img/diagram.jpg" />
-            <p><cite>From <a href="https://leanpub.com/livingdocumentation">https://leanpub.com/livingdocumentation</a> by Cyrille Martraire</cite></p>
+          <h1>Swagger</h1>
+          <img src="img/swagger-ui-screenshot.png" />
         </section>
         <section>
-            <h1>Markdown</h1>
-            <img class="stretch" src="img/markdown-preview.png" alt="Markdown example" />
-            <p><cite>From https://mastercaweb.u-strasbg.fr/rediger-web-markdown/</cite></p>
+          <h1>Build pipeline As Code</h1>
+          <img class="stretch"
+               src="img/successful-pipeline-OK.png" />
         </section>
         <section>
-            <h1>Asciidoc</h1>
-            <img src="img/asciidoc-Big.png">
+          <h1>Infrastructure as code</h1>
+          <ul>
+            <li>Puppet recipe</li>
+            <li>Playbook ansible</li>
+            <li>Dockerfile</li>
+            <li>Docker compose file</li>
+          </ul>
         </section>
         <section>
-            <h1>Swagger</h1>
-            <img src="img/swagger-ui-screenshot.png" />
-        </section>
-        <section>
-           <h1>Build pipeline As Code</h1>
-            <img class="stretch" src="img/successful-pipeline-OK.png">
-        </section>
-        <section>
-            <h1>Infrastructure as code</h1>
-            <ul>
-                <li>Puppet recipe</li>
-                <li>Playbook ansible</li>
-                <li>Dockerfile</li>
-                <li>Docker compose file</li>
-            </ul>
-        </section>
-        <section>
-            <h1>Puppet</h1>
-            <pre class="stretch"><code data-trim>
+          <h1>Puppet</h1>
+          <pre class="stretch">
+<code data-trim="">
 package { 'ssh' :
-    ensure => latest
+    ensure =&gt; latest
 }
 
 file { 'sshd_config' :
-    path    => '/etc/ssh/sshd_config',
-    owner   => root,
-    group   => root,
-    require => Package[ssh],
-    notify  => Service[ssh],
+    path    =&gt; '/etc/ssh/sshd_config',
+    owner   =&gt; root,
+    group   =&gt; root,
+    require =&gt; Package[ssh],
+    notify  =&gt; Service[ssh],
     ...
 }
 
 service { 'ssh' :
-    ensure => running
+    ensure =&gt; running
 }
-            </code></pre>
-            <p><cite>From https://github.com/aestasit.</cite></p>
+            </code>
+</pre>
+          <p>
+            <cite>From https://github.com/aestasit.</cite>
+          </p>
         </section>
         <section>
-            <h1>Puppet</h1>
-            <pre class="stretch"><code data-trim data-noescape>
+          <h1>Puppet</h1>
+          <pre class="stretch">
+<code data-noescape=""
+      data-trim="">
 package { 'ssh' :
-    ensure => latest
+    ensure =&gt; latest
 }
 
 file { 'sshd_config' :
-    path    => '/etc/ssh/sshd_config',
-    owner   => root,
-    group   => root,
-    require => Package[ssh],
-    <mark>notify  => Service[ssh]</mark>,
+    path    =&gt; '/etc/ssh/sshd_config',
+    owner   =&gt; root,
+    group   =&gt; root,
+    require =&gt; Package[ssh],
+    
+<mark>notify  =&gt; Service[ssh]</mark>,
     ...
 }
 
 service { 'ssh' :
-    ensure => running
+    ensure =&gt; running
 }
-            </code></pre>
-            <p><cite>From https://github.com/aestasit.</cite></p>
+            </code>
+</pre>
+          <p>
+            <cite>From https://github.com/aestasit.</cite>
+          </p>
         </section>
         <section>
-            <h1>Playbook ansible</h1>
-            <pre class="stretch"><code>
+          <h1>Playbook ansible</h1>
+          <pre class="stretch">
+<code>
 ---
 - hosts: webservers
   vars:
@@ -516,11 +998,13 @@ service { 'ssh' :
   handlers:
     - name: restart apache
       service: name=httpd state=restarted
-            </code></pre>
+            </code>
+</pre>
         </section>
         <section>
-            <h1>Playbook ansible</h1>
-            <pre class="stretch"><code data-noescape>
+          <h1>Playbook ansible</h1>
+          <pre class="stretch">
+<code data-noescape="">
 ---
 - hosts: webservers
   vars:
@@ -532,18 +1016,21 @@ service { 'ssh' :
     yum: name=httpd state=latest
   - name: write the apache config file
     template: src=/srv/httpd.j2 dest=/etc/httpd.conf
-    <mark>notify:
+    
+<mark>notify:
     - restart apache</mark>
   - name: ensure apache is running (and enable it at boot)
     service: name=httpd state=started enabled=yes
   handlers:
     - name: restart apache
       service: name=httpd state=restarted
-            </code></pre>
+            </code>
+</pre>
         </section>
         <section>
-            <h1>Dockerfile</h1>
-            <pre><code data-noescape>
+          <h1>Dockerfile</h1>
+          <pre>
+<code data-noescape="">
 <mark>FROM</mark> java:8
 
 ADD spring-petclinic /app
@@ -557,12 +1044,16 @@ RUN ls /app/mvnw
 RUN /bin/bash -c '/app/mvnw -e clean install spring-boot:repackage -DskipTests'
 
 CMD /app/mvnw -e spring-boot:run -DskipTests
-            </code></pre>
-            <p><cite>From https://github.com/aestasit.</cite></p>
+            </code>
+</pre>
+          <p>
+            <cite>From https://github.com/aestasit.</cite>
+          </p>
         </section>
-       <section>
-            <h1>Dockerfile</h1>
-            <pre><code data-noescape>
+        <section>
+          <h1>Dockerfile</h1>
+          <pre>
+<code data-noescape="">
 FROM java:8
 
 ADD spring-petclinic /app
@@ -575,13 +1066,18 @@ RUN chmod a+x /app/mvnw
 RUN ls /app/mvnw
 RUN /bin/bash -c '/app/mvnw -e clean install spring-boot:repackage -DskipTests'
 
-CMD /app/mvnw -e <mark>spring-boot:run</mark> -DskipTests
-            </code></pre>
-            <p><cite>From https://github.com/aestasit.</cite></p>
+CMD /app/mvnw -e 
+<mark>spring-boot:run</mark> -DskipTests
+            </code>
+</pre>
+          <p>
+            <cite>From https://github.com/aestasit.</cite>
+          </p>
         </section>
-       <section>
-            <h1>Dockerfile</h1>
-            <pre><code data-noescape>
+        <section>
+          <h1>Dockerfile</h1>
+          <pre>
+<code data-noescape="">
 FROM java:8
 
 ADD spring-petclinic /app
@@ -595,15 +1091,21 @@ RUN ls /app/mvnw
 RUN /bin/bash -c '/app/mvnw -e clean install spring-boot:repackage -DskipTests'
 
 CMD /app/mvnw -e spring-boot:run -DskipTests
-            </code></pre>
-            <p><cite>From https://github.com/aestasit.</cite></p>
-            <pre><code>
+            </code>
+</pre>
+          <p>
+            <cite>From https://github.com/aestasit.</cite>
+          </p>
+          <pre>
+<code>
 docker run -d my_bootiful_petclinic
-            </code></pre>
+            </code>
+</pre>
         </section>
         <section>
-            <h1>Docker compose file</h1>
-            <pre class="stretch"><code data-trim>
+          <h1>Docker compose file</h1>
+          <pre class="stretch">
+<code data-trim="">
 version: '2'
 services:
 
@@ -629,22 +1131,27 @@ services:
       - "5601:5601"
     depends_on:
       - elasticsearch
-            </code></pre>
+            </code>
+</pre>
         </section>
         <section>
           <h1>Docker compose file</h1>
-          <pre class="stretch"><code data-trim data-noescape>
+          <pre class="stretch">
+<code data-noescape=""
+      data-trim="">
 version: '2'
 services:
 
-  <mark>elasticsearch</mark>:
+  
+<mark>elasticsearch</mark>:
     build: elasticsearch/
     ...
     ports:
       - "9200:9200"
       - "9300:9300"
 
-  <mark>logstash</mark>:
+  
+<mark>logstash</mark>:
     build: logstash/
     ...
     ports:
@@ -652,18 +1159,22 @@ services:
     depends_on:
       - elasticsearch
 
-  <mark>kibana</mark>:
+  
+<mark>kibana</mark>:
     build: kibana/
     ...
     ports:
       - "5601:5601"
     depends_on:
       - elasticsearch
-            </code></pre>
+            </code>
+</pre>
         </section>
-       <section>
+        <section>
           <h1>Docker compose file</h1>
-          <pre class="stretch"><code data-trim data-noescape>
+          <pre class="stretch">
+<code data-noescape=""
+      data-trim="">
 version: '2'
 services:
 
@@ -679,136 +1190,144 @@ services:
     ...
     ports:
       - "5000:5000"
-    <mark>depends_on</mark>:
-      <mark>- elasticsearch</mark>
+    
+<mark>depends_on</mark>:
+      
+<mark>- elasticsearch</mark>
 
   kibana:
     build: kibana/
     ...
     ports:
       - "5601:5601"
-    <mark>depends_on</mark>:
-      <mark>- elasticsearch</mark>
-            </code></pre>
+    
+<mark>depends_on</mark>:
+      
+<mark>- elasticsearch</mark>
+            </code>
+</pre>
         </section>
         <section>
-            <h1>Biz Dev Ops</h1>
-            <img class="stretch" src="img/testNotPhase.png">
+          <h1>Biz Dev Ops</h1>
+          <img class="stretch"
+               src="img/testNotPhase.png" />
         </section>
         <section>
-            <h1>What DevOps ?</h1>
-            <br/>
-            <h2 class="atLeft fragment shrink" data-fragment-index="1"><b>C</b>ULTURE</h2>
-            <h2 class="fragment shrink" data-fragment-index="1"><b>M</b>EASUREMENT</h2>
-            <h2 class="atLeft fragment grow" data-fragment-index="1"><b>A</b>UTOMATION</h2>
-            <h2 class="fragment grow" data-fragment-index="2"><b>S</b>HARING</h2>
-            <div class="fragment fade-in atLeft" data-fragment-index="1">
-                <ul>
-                    <li>TDD</li>
-                    <li>* as Code</li>
-                </ul>
-            </div>
-            <div class="atRight fragment fade-in" data-fragment-index="2">
-                <ul>
-                    <li>* as Code</li>
-                </ul>
-            </div>
+          <h1>What DevOps ?</h1>
+          <br />
+          <h2 class="atLeft fragment shrink"
+              data-fragment-index="1">
+          <b>C</b>ULTURE</h2>
+          <h2 class="fragment shrink"
+              data-fragment-index="1">
+          <b>M</b>EASUREMENT</h2>
+          <h2 class="atLeft fragment grow"
+              data-fragment-index="1">
+          <b>A</b>UTOMATION</h2>
+          <h2 class="fragment grow"
+              data-fragment-index="2">
+          <b>S</b>HARING</h2>
+          <div class="fragment fade-in atLeft"
+               data-fragment-index="1">
+            <ul>
+              <li>TDD</li>
+              <li>* as Code</li>
+            </ul>
+          </div>
+          <div class="atRight fragment fade-in"
+               data-fragment-index="2">
+            <ul>
+              <li>* as Code</li>
+            </ul>
+          </div>
         </section>
         <section>
-            <h1>Questions ?</h1>
-            <h2>Hello Slides As Code</h2>
-            <pre><code data-trim>
+          <h1>Questions ?</h1>
+          <h2>Hello Slides As Code</h2>
+          <pre>
+<code data-trim="">
 <section>
-    <h1>Titre</h1>
-    <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
+    
+<h1>Titre</h1>
+    
+<ul>
+        
+<li>Item 1</li>
+        
+<li>Item 2</li>
     </ul>
 </section>
-            </code></pre>
-            <p>
-                <a href="https://github.com/hrambelo/AgileLaval2017">https://github.com/hrambelo/AgileLaval2017</a>
-            </p>
+            </code>
+</pre>
+          <p>
+            <a href="https://github.com/hrambelo/AgileLaval2017">https://github.com/hrambelo/AgileLaval2017</a>
+          </p>
         </section>
         <section>
-            <h1>Merci !</h1>
-            <img class="stretch" src="img/merci-sponsor.png">
+          <img class="stretch"
+               src="img/merci-sponsor.png" />
         </section>
         <section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <section>
-            <p>dis autrement</p>
-            <h1>Mon équipe souhaite livrer <br/>la <b>valeur métier</b> <br/>tous les <b>2h</b></h1>
+          <p>dis autrement</p>
+          <h1>Mon équipe souhaite livrer 
+          <br />la 
+          <b>valeur métier</b>
+          <br />tous les 
+          <b>2h</b></h1>
         </section>
+      </div>
+      <div class="progress"
+           style="display: block;">
+        <span style="width: 109.118px;"></span>
+      </div>
     </div>
-    <div style="display: block;" class="progress"><span style="width: 109.118px;"></span></div>
-
-
-</div>
-
-<script src="lib/js/head.min.js"></script>
-<script src="js/reveal.js"></script>
-
-<script>
-
-    // Full list of configuration options available at:
-    // https://github.com/hakimel/reveal.js#configuration
-    Reveal.initialize({
-        controls: true,
-        progress: true,
-        history: true,
-        center: false,
-        // Loop the presentation
-        loop: false,
-        // Number of milliseconds between automatically proceeding to the
-        // next slide, disabled when set to 0, this value can be overwritten
-        // by using a data-autoslide attribute on your slides
-        autoSlide: 0,
-        // Stop auto-sliding after user input
-        autoSlideStoppable: true,
-        transition: 'none', // none/fade/slide/convex/concave/zoom
-        // Optional reveal.js plugins
-        dependencies: [
-            {
-                src: 'lib/js/classList.js', condition: function () {
-                return !document.body.classList;
-            }
-            },
-            {
-                src: 'plugin/markdown/marked.js', condition: function () {
-                return !!document.querySelector('[data-markdown]');
-            }
-            },
-            {
-                src: 'plugin/markdown/markdown.js', condition: function () {
-                return !!document.querySelector('[data-markdown]');
-            }
-            },
-            {
-                src: 'plugin/highlight/highlight.js', async: true, condition: function () {
-                return !!document.querySelector('pre code');
-            }, callback: function () {
-                hljs.initHighlightingOnLoad();
-            }
-            },
-            {src: 'plugin/zoom-js/zoom.js', async: true},
-            {src: 'plugin/notes/notes.js', async: true}
-        ]
-    });
-
-</script>
-
-</body>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+       // Full list of configuration options available at:
+       // https://github.com/hakimel/reveal.js#configuration
+       Reveal.initialize({
+           controls: true,
+           progress: true,
+           history: true,
+           center: false,
+           // Loop the presentation
+           loop: false,
+           // Number of milliseconds between automatically proceeding to the
+           // next slide, disabled when set to 0, this value can be overwritten
+           // by using a data-autoslide attribute on your slides
+           autoSlide: 0,
+           // Stop auto-sliding after user input
+           autoSlideStoppable: true,
+           transition: 'none', // none/fade/slide/convex/concave/zoom
+           // Optional reveal.js plugins
+           dependencies: [
+               {
+                   src: 'lib/js/classList.js', condition: function () {
+                   return !document.body.classList;
+               }
+               },
+               {
+                   src: 'plugin/markdown/marked.js', condition: function () {
+                   return !!document.querySelector('[data-markdown]');
+               }
+               },
+               {
+                   src: 'plugin/markdown/markdown.js', condition: function () {
+                   return !!document.querySelector('[data-markdown]');
+               }
+               },
+               {
+                   src: 'plugin/highlight/highlight.js', async: true, condition: function () {
+                   return !!document.querySelector('pre code');
+               }, callback: function () {
+                   hljs.initHighlightingOnLoad();
+               }
+               },
+               {src: 'plugin/zoom-js/zoom.js', async: true},
+               {src: 'plugin/notes/notes.js', async: true}
+           ]
+       });
+    </script>
+  </body>
 </html>
