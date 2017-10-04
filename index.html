@@ -47,9 +47,7 @@
     <!-- Any section element inside of this container is displayed as a slide -->
     <div class="slides">
 
-        <section>
-            <br/>
-            <br/>
+        <section class="center">
             <h1>Mon équipe se focalise sur <br/> la <b>valeur métier</b> <br/> ... grâce au <b>code</b></h1>
             <br/>
             <p>
@@ -57,76 +55,199 @@
                 <a href="http://www.twitter.com/gcollic">@gcollic</a>
             </p>
         </section>
-        <section>
-            <p>Toute ressemblance avec des faits réels se verrait fortuite</p>
-            <p>La véracité des dates n'est pas garantie</p>
+        <section class="center">
+
+        <h1>< nous /></h1>
+            <img src="img/atr17/avatarGCollic.png" />
+            <img src="img/atr17/avatar.png" />
+        </section>
+        <section class="center">
+            <p>Histoire : Livrer de la <b>valeur métier</b> aussi <b>fréquemment</b> que possible</p>
+        </section>
+        <section class="center">
+            <h2>Chapitre 0</h2>
+            <h3>Le roi est mort</h3>
         </section>
         <section>
-            <h2>Chapitre I</h2>
-            <h3>Le roi est mort</h3>
+            <h2>Cycle en V avant 1995 ...</h2>
+            <ul>
+                <li>frequence de livraisons : ~2ans</li>
+                <li>succès : + ou - </li>
+            </ul>
             <img class="stretch" src="img/atr17/princebelair.jpg">
         </section>
         <section>
-            <h2>Chapitre I</h2>
-            <h3>En apparence tout marche ...</h3>
+            <h2>Problème ...</h2>
             <ul>
-                <li>On est avant 1995 et </li>
-                <li>l'équipe arrive à livrer tous les 2ans</li>
+                <li>innovation</li><li>=> incertitudes sur les solutions métiers et techniques</li></li>
+                <li>marché évolue de + en + vite</li><li> => obsolescence des besoins initiaux</li></li>
             </ul>
         </section>
         <section>
-            <h2>Chapitre I</h2>
-            <h3>... Mais ...</h3>
-            <ul>
-                <li>ce qui est livré n'est pas forcément valide</li>
-                <li>et n'est pas forcément les fonctionnalité les plus prioritaires</li>
-                <li>on veut livrer tous les 2mois</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Chapitre I</h2>
-            <h3>... En plus</h3>
-            <ul>
-                <li>elle veut innover</li>
-                <li><p>=>   implique des incertitudes sur les solutions métiers et techniques</p></li>
-                <li>le marché évolue de plus en plus vite</li>
-                <li><p>=>   obsolescence des besoins exprimés initialement</p></li>
-            </ul>
-        </section>
-        <section>
-            <h2>Chapitre I</h2>
-            <h3>Solution</h3>
-            <h4>XP ou Scrum à la rescousse</h4>
+            <h2>... Solution</h2>
+            <h3>XP ou Scrum à la rescousse</h3>
             <ul>
                 <li>Découpage des besoins en fonctionnalités métiers indépendantes</li>
-                <li>Livraisons fréquentes</li>
+                <li>Livraisons fréquentes
+                        <li> -- Validation continue</li>
+                        <li> -- Repriorisation continue</li>
+                </li>
+            </ul>
+        </section>
+        <section class="center">
+            <p>… mais pas si facile de détroner le roi</p>
+        </section>
+        <section class="center">
+            <h2>Chapitre I</h2>
+            <h3>livrer plus fréquemment, c’est pas si facile</h3>
+        </section>
+        <section>
+            <h2>Problème 1 ...</h2>
+            <h3>Recette</h3>
+            <ul>
+                <li>recette d’un mois toutes les 2 semaines</li>
             </ul>
         </section>
         <section>
-            <h2>Chapitre I</h2>
-            <h3>youpi 2 mois</h3>
+            <h2>... Solution 1</h2>
+            <h3>Automatisation des tests</h3>
+            <ul>
+                <li>Gain de temps</li>
+                <li>Reproductible</li>
+            </ul>
         </section>
         <section>
+            <h2>Problème 2 ...</h2>
+            <h3>Turn over</h3>
+            <ul>
+                <li>Perte de connaissance dans un projet</li>
+            </ul>
+        </section>
+        <section>
+            <h2>... Solution 2 (XP)</h2>
+            <h3>Industrialisation</h3>
+            <ul>
+                <li>Automatisation du build</li>
+                <li>Automatisation packaging du produit</li>
+                <li>Intégration continue</li>
+                <li>Gestion de source</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Bénéfices</h2>
+            <ul>
+                <li>Gain de temps</li>
+                <li>Reproductible</li>
+            </ul>
+            <br />
+            <br />
+            <ul>
+                <li>Youpi, 1995 : 2 ans -&gt; 2 mois -&gt; 2 semaines, grâce à l’incrémental et l’industrialisation</li>
+            </ul>
+        </section>
+        <section class="center">
             <h2>Chapitre II</h2>
-            <p>Vive le roi</p>
+            <h3>Livrer à la fin de chaque itération</h3>
+        </section>
+        <section class="center">
+            <ul>
+                <li>tout ce qui marche</li>
+                <li>rien que ce qui marche</li>
+            </ul>
         </section>
         <section>
+            <h2>Problème ...</h2>
+            <h3>Coherence Livrable ?</h3>
+            <ul>
+                <li>Plusieurs fonctionnalités en parrallèles</li>
+                <li>Elles touchent toute à la base de donnée</li>
+                <li>Certaines ne sont pas validées en fin d’itération</li>
+                <li>Comment livrer l’intégralité de ce qui est prêt sans être géné par le reste ?</li>
+            </ul>
+        </section>
+        <section>
+            <h2>... Solution</h2>
+            <ul>
+                <li>Branche de gestion de version pour chaque fonctionnalité</li>
+                <li>Mettre avec le code tout ce qui est nécessaire à son bon fonctionnementgit s
+                    <li> -- Scripts d’évolution de base de donnée à côté du code, on prend tout ou rien, c’est
+                        cohérent
+                    </li>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Bénéfices</h2>
+            <ul>
+                <li>Meilleure interaction dev/ops</li>
+                <li>Cohérent</li>
+                <li>Reproductible</li>
+            </ul>
+        </section>
+        <section class="center">
             <h2>Chapitre III</h2>
-            <p>Éternel recommencement</p>
-            <img class="stretch" src="img/atr17/belAirvsNow.jpg">
+            <h3>Difficulté à avoir des environnements iso-production</h3>
+        </section>
+        <section class="center">
+            <ul>
+                <li>tout ce qui marche</li>
+                <li>rien que ce qui marche</li>
+            </ul>
         </section>
         <section>
-            <h1>TDD</h1>
-            <img class="stretch" src="img/tdd-simple.svg">
-            <p><cite>From Growing Object-Oriented Software by Nat Pryce and Steve Freeman.</cite></p>
+            <h2>Problème ...</h2>
+            <h3>Coherence Livrable ?</h3>
+            <ul>
+                <li>2 semaines, pas forcément suffisant</li>
+                <li>Anomalie en production : urgence</li>
+                <li>Pourquoi attendre 2 semaines pour livrer de la valeur métier déjà validée</li>
+                <li>Spotify, GAFA/NATU</li>
+            </ul>
         </section>
         <section>
+            <h2>... Solution</h2>
+            <h3>Métier : Kanban, Technique : ?</h3>
+            <ul>
+                <li>Reproduire le succès 2ans-&gt;2semaines : 2semaines-&gt;2 heures</li>
+            </ul>
+            <img src="img/atr17/belAirvsNow.jpg" class="stretch">
+        </section>
+
+        <section>
+            <h2>Problème ...</h2>
+            <h3>Environnement de développement et de production différents</h3>
+            <ul>
+                <li>Dépendances installées et dans quels versions, etc</li>
+                <li>1 semaine pour recréer un environnement de test d’équerre</li>
+            </ul>
+        </section>
+        <section>
+            <h2>... Solution</h2>
+            <h3>Infrastructure As Code : Outils de provisionning</h3>
+            <ul>
+                <li>Vulgarisation du principe</li>
+                <li>Exemple Puppet ?</li>
+                <li>Mettre avec le code tout ce qui est nécessaire à son bon fonctionnement</li>
+                <li>Présent avec le code dans la branche de gestion de version</li>
+            </ul>
+            <img src="img/atr17/belAirvsNow.jpg" class="stretch">
+        </section>
+        <section>
+            <h2>Bénéfices</h2>
+            <ul>
+                <li>Auditable</li>
+                <li>Meilleure interaction dev/ops</li>
+                <li>Cohérent</li>
+                <li>Reproductible</li>
+            </ul>
             <br/>
             <br/>
-            <br/><!-- On m'a forcé à faire des br à l'insu de mon plein gré -->
-            <br/>
-            <br/>
-            <h1>Démo</h1>
+            <ul>
+                <li>Youpi : 2005 : 2 semaines -&gt; 2 heures</li>
+            </ul>
+        </section>
+        <section class="center">
+            <h1>Fan In : 25 min</h1>
         </section>
         <section>
             <h1>TDD</h1>
