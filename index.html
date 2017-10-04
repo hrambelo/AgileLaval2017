@@ -40,13 +40,19 @@
         .reveal ul > li > ul > li {
             font-size: 0.5em !important;
         }
+        #title-footer {
+            z-index: 0;
+        }
     </style>
 </head>
 
 <body>
 
 <div class="reveal">
-
+        <footer style="background:rgba(219,120,39,1)" id="title-footer">
+                <p class="atLeft"><b>#AgileTourRennes2017</b></p>
+                <p class="atRight"><b>@gcollic - @hrambelo</b></p>
+            </footer>
     <!-- Any section element inside of this container is displayed as a slide -->
     <div class="slides">
 
@@ -146,18 +152,10 @@
         </section>
         <section>
             <h1>Exemple</h1>
-            <ul>
-                <li>Bertrand met en production le projet</li>
-                <li><img class="stretch" src="img/atr17/publish.png"></li>
-                <li>Tout fonctionne</li>
-                <li>Puis Léa met en production</li>
-                <li>Ça ne marche plus !</li>
-                <li>Oubli de mise en commun par bertrand.</li>
-            </ul>
+            <img class="stretch" src="img/atr17/publish.png">
         </section>
         <section>
-            <h1>Solution 2 (XP)</h1>
-            <h2>Industrialisation</h2>
+            <h1>Industrialisation (XP)</h1>
             <ul>
                 <li>Gestion de source</li>
                 <li>Automatisation du build</li>
@@ -262,7 +260,7 @@
         </section>
 
         <section>
-            <h1>Environnement de développement différent de la production</h1>
+            <h1>Environnement de dév. différent de la prod.</h1>
             <ul>
                 <li>Quelles dépendances installées ?</li>
                 <li>Dans quelles versions ?</li>
@@ -273,13 +271,14 @@
         <section>
             <h1>Infrastructure As Code !</h1>
             <h2>Outils de provisionning</h2>
+            <pre>
+<code>package { 'openssh':
+    ensure => present,
+}</code></pre>
             <ul>
-                <li>Vulgarisation du principe</li>
-                <li>Exemple Puppet ?</li>
                 <li>Mettre avec le code tout ce qui est nécessaire à son bon fonctionnement</li>
                 <li>Présent avec le code dans la branche de gestion de version</li>
             </ul>
-            <img src="img/atr17/belAirvsNow.jpg" class="stretch">
         </section>
         <section>
             <h1>Bénéfices</h1>
@@ -289,15 +288,16 @@
                 <li>Cohérent</li>
                 <li>Reproductible</li>
             </ul>
-            <br/>
-            <br/>
-            <ul>
-                <li>Youpi : 2005 : 2 semaines -&gt; 2 heures</li>
-            </ul>
         </section>
+
         <section class="center">
-            <h1>Fan In : 25 min</h1>
-        </section>
+                <h1>2010 : Youpi !</h1>
+                <ul>
+                    <li>Livraison de valeur métier
+                    <ul><li>Passe de 2 semaines à 2 heures !</li></ul>
+                    </li>
+                </ul>
+            </section>
         <section>
             <h1>TDD</h1>
             <img class="stretch" src="img/tdd-simple.svg">
@@ -754,10 +754,7 @@ services:
         </section>
     </div>
     <div style="display: block;" class="progress"><span style="width: 109.118px;"></span></div>
-    <footer style="background:rgba(219,120,39,1)" id="title-footer">
-        <p class="atLeft"><b>#AgileTourRennes2017</b></p>
-        <p class="atRight"><b>@gcollic - @hrambelo</b></p>
-    </footer>
+
 
 </div>
 
