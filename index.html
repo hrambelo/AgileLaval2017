@@ -408,9 +408,11 @@
         <section class="center">
             <h1>Specification As Code</h1>
         </section>
+        <section class="center">
+            <img class="stretch" src="img/atr17/SpecificationByExample.jpg" />
+        </section>
         <section>
-            <img class="stretch"
-                 src="img/specs.png" />
+            <img class="stretch" src="img/specs.png" />
             <p>
                 <cite>From Specification By Example by Gojko Adzic.</cite>
             </p>
@@ -419,7 +421,9 @@
         <section>
             <h1>Documentation as code</h1>
             <ul>
-                <li>Living Documentation</li>
+                <li>Living Documentation
+                  <ul><li>Fait partie des spécifications exécutables</li></ul>
+                </li>
                 <li>Markdown</li>
                 <li>Asciidoc</li>
                 <li>Swagger</li>
@@ -443,33 +447,44 @@
                     <a href="https://leanpub.com/livingdocumentation">https://leanpub.com/livingdocumentation</a>by Cyrille Martraire</cite>
             </p>
         </section>
+        <section>
+            <h1>Markdown</h1>
+            <img alt="Markdown example"
+                 class="stretch"
+                 src="img/markdown-preview.png" />
+            <p>
+                <cite>From https://mastercaweb.u-strasbg.fr/rediger-web-markdown/</cite>
+            </p>
+        </section>
+          <section>
+              <h1>Asciidoc</h1>
+              <img src="img/asciidoc-Big.png" />
+          </section>
+          <section>
+              <h1>Swagger</h1>
+              <img src="img/swagger-ui-screenshot.png" />
+          </section>
         <section class="center">
           <h1>Bénéfices du code</h1>
           <h2>Communs à toutes les pratiques</h2>
         </section>
         <section class="center">
-          <h1>Tout est gain de temps, indirectement</h1>
+          <h2><i>directement ou indirectement,<br/>tout bénéfice se traduit<br/>en gain de temps</i></h2>
         </section>
         <section class="center">
           <ul>
-            <li>Gain de temps directs : automatisation 
+            <li>Automatisation 
             <ul>
               <li>La 1ère fois coûte plus cher</li>
               <li>Les suivantes sont quasi gratuites</li>
-              <li>Permet de faire les choses plus souvent 
-              <ul>
-                <li>Raccourcissement des boucles de feedbacks</li>
-              </ul></li>
-              <li>Permet de faire les choses à plus grande échelle 
-              <ul>
-                <li>Automatiser l’installation d’un serveur permet de rapidement en déployer des dizaines</li>
-              </ul></li>
+              <li>Plus rapide = plus souvent = plus de feedback</li>
+              <li>Permet de passer à l'échelle</li>
             </ul></li>
           </ul>
         </section>
         <section class="center">
           <ul>
-            <li>Garder la maitrise !</li>
+            <li>Attention à garder la maitrise !</li>
           </ul>
           <div class="clear"></div>
           <img src="img/atr17/turn-over2.jpg" class="stretch">
@@ -485,15 +500,15 @@
         </section>
         <section class="center">
           <ul>
-            <li>“Automatisation bête” sans code 
+            <li>“Automatisation” sans code 
             <ul>
-              <li>Installer à la main d’un serveur</li>
+              <li>Installer à la main</li>
               <li>En faire une image copie</li>
-              <li>Repartir de cette copie à chaque nouvelle installation</li>
+              <li>Utiliser cette copie pour chaque nouvelle installation</li>
             </ul></li>
             <li>Problème 
             <ul>
-              <li>Changement incompatible avec l’image (changement d’OS, etc)</li>
+              <li>Changement incompatible (changement d’OS, etc) =></li>
               <li>Comment on avait installé la première VM déjà ?</li>
             </ul></li>
           </ul>
@@ -512,39 +527,35 @@
         </section>
         <section class="center">
           <ul>
-            <li>Autonomation 
-            <ul>
-              <li>Notion Lean (Toyota)</li>
-              <li>Automatiser pour décupler les capacités de l’opérateur</li>
-              <li>Pas de feedback, pas d’amélioration</li>
-              <li>Ne pas remplacer l’intelligence de l’opérateur par une machine</li>
-            </ul></li>
-          </ul>
-        </section>
-        <section class="center">
-          <ul>
-            <li>Man vs Computer</li>
-          </ul>
-        </section>
-        <section class="center">
-          <ul>
-              <li>Un ordinateur, c’est bête et méchant 
+            <li>Autonomation
               <ul>
-                <li>Ça fait exactement ce qu’on lui dit</li>
-                <li>Mais il faut être précis</li>
-                <li>Sinon il nous le dit</li>
-              </ul></li>
+                <li>Ne pas remplacer l'humain</li>
+                <li>Faire des super-humains</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section class="center">
+            <h1>Les ordinateurs sont bêtes</h1>
+            <h2>Et ça, c'est bien</h2>
+        </section>
+        <section class="center">
+          <h1>Un ordinateur</h1>
+          <ul>
+            <li>Ça fait exactement ce qu’on lui dit</li>
+            <li>Mais il faut être précis</li>
+            <li>Sinon <code>syntax error</code></li>
           </ul>
         </section>
         <section class="center">
           <ul>
-            <li>Un humain, c’est intelligent et inattendu 
+            <li>Un humain, c’est intelligent ou inattendu
             <ul>
-              <li>Si on est ambigüe 
+              <li>Ambigüité ?
               <ul>
                 <li>Il corrigera parfois le tir, en bien ou en mal</li>
               </ul></li>
-              <li>Si notre document est sans ambigüité 
+              <li>Pas d'ambiguïté ?
               <ul>
                 <li>Il ne le suivra peut être pas</li>
                 <li>À tort ou à raison</li>
@@ -552,56 +563,51 @@
               <li>Il ne nous préviendra pas forcément 
               <ul>
                 <li>“C’est évident !”</li>
+                <li>“J'ai oublié de te dire, mais ...”</li>
               </ul></li>
             </ul></li>
           </ul>
       </section>
       <section class="center">
+        <h1>Le code documente</h1>
+      </section>
+      <section class="center">
+        <h1>Véracité des informations</h1>
         <ul>
-            <li>Le code documente</li>
+          <li>Doc sujet à interprétation, le code non</li>
+          <li>Un document peut être erroné 
+          <ul>
+            <li>Il est écrit qu’il faut faire A puis B</li>
+            <li>“Ah oui? Je ne regarde plus.”</li>
+            <li>“En fait non, maintenant il faut faire dans l’autre sens”</li>
+          </ul></li>
+          <li>Le code ne ment pas 
+          <ul>
+            <li>Si le script de déploiement fait A puis B, alors l'ordi fait A puis B</li>
+          </ul></li>
         </ul>
       </section>
       <section class="center">
-        <ul>
-              <li>Véracité des informations 
-              <ul>
-                <li>Un doc peut être ambigüe, le code ne l’est pas</li>
-                <li>Un document peut être erroné 
-                <ul>
-                  <li>Il est écrit qu’il faut faire A puis B</li>
-                  <li>“Ah oui ça dit ça ? J’ai l’habitude, du coup je regarde plus la doc.”</li>
-                  <li>“Non mais oui, on devrait faire comme ça mais depuis la mise à jour il faut faire dans l’autre sens”</li>
-                </ul></li>
-                <li>Le code ne ment pas 
-                <ul>
-                  <li>Si le script de déploiement contient l’action A puis B, il le fait</li>
-                </ul></li>
-              </ul></li>
-            </ul>
-          </section>
-          <section class="center">
+          <h1>Pérénité des informations</h1>
+          <ul>
+            <li>Anecdote 
             <ul>
-              <li>Pérénité des informations 
+              <li>Mise en place d’un environnement de dev pour firmware de clavier</li>
+              <li>Tous les 2 ans 
               <ul>
-                <li>Anecdote 
-                <ul>
-                  <li>Mise en place d’un environnement de dev pour firmware de clavier</li>
-                  <li>Tous les 2 ans 
-                  <ul>
-                    <li>J’oubli !</li>
-                  </ul></li>
-                  <li>Dockerfile à la rescousse 
-                  <ul>
-                    <li>https://github.com/gcollic/Grimoire60_keyboard/blob/master/firmware/Dockerfile</li>
-                  </ul></li>
-                </ul></li>
-                <li>La documentation sous forme papier 
-                <ul>
-                  <li>Est vite obsolète ou côute cher à maintenir pour ne pas l’être</li>
-                </ul></li>
+                <li>J’oubli !</li>
               </ul></li>
-            </ul>
-          </section>
+              <li>Dockerfile à la rescousse 
+              <ul>
+                <li>https://github.com/gcollic/Grimoire60_keyboard/blob/master/firmware/Dockerfile</li>
+              </ul></li>
+            </ul></li>
+            <li>La documentation sous forme papier 
+            <ul>
+              <li>Est vite obsolète ou côute cher à maintenir pour ne pas l’être</li>
+            </ul></li>
+          </ul>
+      </section>
           <section class="center">
             <ul>
               <li>Attention 
@@ -727,23 +733,6 @@
         <section>
             <h1>Spécification exécutables</h1>
         </section>
-        <section>
-            <h1>Markdown</h1>
-            <img alt="Markdown example"
-                 class="stretch"
-                 src="img/markdown-preview.png" />
-            <p>
-                <cite>From https://mastercaweb.u-strasbg.fr/rediger-web-markdown/</cite>
-            </p>
-        </section>
-          <section>
-              <h1>Asciidoc</h1>
-              <img src="img/asciidoc-Big.png" />
-          </section>
-          <section>
-              <h1>Swagger</h1>
-              <img src="img/swagger-ui-screenshot.png" />
-          </section>
           <section>
               <h1>Build pipeline As Code</h1>
               <img class="stretch"
@@ -1217,38 +1206,32 @@ services:
 </pre>
         </section>
         <section>
-          <h1>Biz Dev Ops</h1>
-          <img class="stretch"
-               src="img/testNotPhase.png" />
-        </section>
-        <section>
-          <h1>What DevOps ?</h1>
-          <br />
-          <h2 class="atLeft fragment shrink"
-              data-fragment-index="1">
-          <b>C</b>ULTURE</h2>
-          <h2 class="fragment shrink"
-              data-fragment-index="1">
-          <b>M</b>EASUREMENT</h2>
-          <h2 class="atLeft fragment grow"
-              data-fragment-index="1">
-          <b>A</b>UTOMATION</h2>
-          <h2 class="fragment grow"
-              data-fragment-index="2">
-          <b>S</b>HARING</h2>
-          <div class="fragment fade-in atLeft"
-               data-fragment-index="1">
-            <ul>
-              <li>TDD</li>
-              <li>* as Code</li>
-            </ul>
-          </div>
-          <div class="atRight fragment fade-in"
-               data-fragment-index="2">
-            <ul>
-              <li>* as Code</li>
-            </ul>
-          </div>
+          <h1>Rappels</h1>
+          <ul>
+            <li>Spécification As Code
+              <ul>
+                <li>Livre : Specification by example</li>
+                <li>Gherkin (Ruby=Cucumber / .Net=SpecFlow / etc)</li>
+              </ul>
+            </li>
+            <li>Infrastructure As Code
+              <ul>
+                <li>Puppet / Ansible / Saltstack</li>
+                <li>Docker !</li>
+              </ul>
+            </li>
+            <li>Bonnes pratiques
+              <ul>
+                <li>Clean Code
+                  <ul><li>Un code difficile à maintenir ne vous aidera pas</li></ul>
+                </li>
+                <li>Autonomation</li>
+                <li>Idempotence</li>
+                <li>Tout mettre en gestion de version</li>
+                <li>Toujours penser "métier"</li>
+              </ul>
+            </li>
+          </ul>
         </section>
         <section>
           <h1>Questions ?</h1>
@@ -1335,7 +1318,8 @@ services:
                },
                {src: 'plugin/zoom-js/zoom.js', async: true},
                {src: 'plugin/notes/notes.js', async: true}
-           ]
+           ],
+           slideNumber: 'c/t'
        });
     </script>
   </body>
