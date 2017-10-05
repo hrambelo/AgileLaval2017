@@ -52,15 +52,15 @@
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
         <section class="center">
-          <h1>Mon équipe se focalise sur 
-          <br />la 
-          <b>valeur métier</b>
-          <br />... grâce au 
-          <b>code</b></h1>
+          <h1>
+            Mon équipe se focalise sur 
+            <br />la <b>valeur métier</b>
+            <br />... grâce au <b>code</b>
+          </h1>
           <br />
           <p>
-          <a href="http://www.twitter.com/hrambelo">@hrambelo</a>- 
-          <a href="http://www.twitter.com/gcollic">@gcollic</a></p>
+            <a href="http://www.twitter.com/hrambelo">@hrambelo</a>-<a href="http://www.twitter.com/gcollic">@gcollic</a>
+          </p>
         </section>
         <section>
           <img class="stretch"
@@ -72,11 +72,25 @@
             <img src="img/atr17/avatar.png" />
         </section>
         <section class="center">
+            <h1>Plan</h1>
+            <ul>
+              <li>Quelques anecdotes</li>
+              <li>Spécifications exécutables</li>
+              <li>Généralisation
+                  <ul>
+                      <li>Bénéfices du code</li>
+                      <li>Pratiques tirant parti d'un peu de code</li>
+                    </ul>
+              </li>
+            </ul>
+        </section>
+        <section class="center">
           <h1>Il était une fois</h1>
-          <h2>Une équipe réalisant du logiciel<br/>
-          Qui voulait livrer de la
-          <b>valeur métier</b><br/>
-          aussi <b>fréquemment</b>que possible</h2>
+          <h2>
+            Une équipe réalisant du logiciel<br/>
+            Qui voulait livrer de la <b>valeur métier</b><br/>
+            aussi <b>fréquemment</b>que possible
+          </h2>
         </section>
         <section class="center">
           <h1>Chapitre 0</h1>
@@ -122,13 +136,9 @@
           </ul>
         </section>
         <section class="center">
-          <h1>… mais ce ne fût pas si facile de détroner le roi</h1>
-          <img class="stretch"
-               src="img/atr17/dethrone.jpg" />
-        </section>
-        <section class="center">
           <h1>Chapitre I</h1>
-          <h2>livrer plus fréquemment, c’est pas si facile</h2>
+          <h2>pas si facile de détroner le roi</h2>
+          <img class="stretch"src="img/atr17/dethrone.jpg" />
         </section>
         <section>
           <h1>Recette</h1>
@@ -145,31 +155,30 @@
           </ul>
         </section>
         <section>
-          <h1>Livraisons fiables</h1>
-          <ul>
-            <li>Comment livrer toutes les 2 semaines…</li>
-            <li>…fiablement</li>
-          </ul>
+          <h1>D'autres problèmes lors des livraisons</h1>
+          <img class="stretch" src="img/atr17/fail2.jpg" />
         </section>
         <section>
-          <h1>Exemple</h1>
-          <img class="stretch"
-               src="img/atr17/publish.png" />
+          <img class="stretch" src="img/atr17/publish.png" />
+          <p>"Ça marche si je livre depuis mon poste !"</p>
         </section>
         <section>
           <h1>Industrialisation (XP)</h1>
           <ul>
             <li>Gestion de source</li>
-            <li>Automatisation du build</li>
-            <li>Automatisation packaging du produit</li>
-            <li>Intégration continue</li>
+            <li>Automatisation du build
+              <ul>
+                <li>Depuis la gestion de source</li>
+                <li>Sur un serveur neutre</li>
+              </ul>
+            </li>
           </ul>
         </section>
         <section>
           <h1>Bénéfices</h1>
           <ul>
-            <li>Gain de temps</li>
-            <li>Reproductible, avec fiabilité</li>
+            <li>Livraison plus facile = livraisons plus fréquentes</li>
+            <li>Plus fiable = plus de temps consacré à la valeur métier</li>
           </ul>
         </section>
         <section class="center">
@@ -180,10 +189,12 @@
               <li>Passe de 2 ans à 2 semaines !</li>
             </ul></li>
           </ul>
+          <img class="stretch" src="img/atr17/prince.jpg" />
         </section>
         <section class="center">
           <h1>Chapitre II</h1>
           <h2>Un nouveau roi, de nouveaux problèmes</h2>
+          <img class="stretch"src="img/atr17/fail.jpg" />
         </section>
         <section class="center">
           <h1>Livrer à la fin de chaque itération</h1>
@@ -195,21 +206,18 @@
         <section>
           <h1>Cohérence du livrable ?</h1>
           <ul>
-            <li>Plusieurs fonctionnalités en parrallèles</li>
-            <li>Touchant toute à la BDD</li>
-            <li>Certaines ne sont pas validées en fin d’itération</li>
-            <li>Comment livrer l’intégralité de ce qui est prêt sans être géné par le reste ?</li>
+            <li>Quel code ?</li>
+            <li>Quel schéma de BDD ?</li>
           </ul>
         </section>
         <section>
-          <h1>Regrouper !</h1>
+          <h1>Réunir !</h1>
           <ul>
-            <li>Branche technique pour chaque fonctionnalité métier</li>
+            <li>Branche de code pour chaque fonctionnalité métier</li>
             <li>Inclure avec le code tout ce qui est nécessaire à son bon fonctionnement 
             <ul>
-              <li>Scripts d’évolution de base de donnée à côté du code</li>
-              <li>On prend tout ou rien, c’est cohérent</li>
-              <li>Exemples : Scripts manuels, migrations géré par les ORMs, Liquibase/Dacpac/etc</li>
+              <li>Code de l'application</li>
+              <li>Scripts de mise à jour de la BDD</li>
             </ul></li>
           </ul>
         </section>
@@ -222,11 +230,13 @@
             </ul></li>
             <li>Cohérent</li>
             <li>Reproductible</li>
+            <img class="stretch"src="img/atr17/success.jpg" />
           </ul>
         </section>
         <section class="center">
           <h1>Chapitre III</h1>
           <h2>Remise en question du nouveau roi</h2>
+          <img class="stretch"src="img/atr17/fail_now.jpg" />
         </section>
         <section>
           <h1>2 semaines ?</h1>
@@ -265,34 +275,43 @@
                src="img/atr17/belAirvsNow.jpg" />
         </section>
         <section>
-          <h1>Environnement de dév. différent de la prod.</h1>
+          <h1>1 semaine pour créer un environnement de test</h1>
+          <h2>Environnement de dév. différent de la prod.</h2>
           <ul>
             <li>Quelles dépendances installées ?</li>
             <li>Dans quelles versions ?</li>
             <li>etc</li>
-            <li>1 semaine pour mettre un environnement d’équerre</li>
           </ul>
         </section>
         <section>
-          <h1>Infrastructure As Code !</h1>
-          <h2>Outils de provisionning</h2>
+          <h1>Outils de provisionning</h1>
+          <ul>
+            <li>Fichier décrivant l'environnement cible
+                <ul>
+                  <li>Simple déclaration</li>
+                  <li>Applicable automatiquement sur un serveur</li>
+                </ul>
+            </li>
+            <li>Présent avec le code dans la branche de gestion de version
+                <ul>
+                  <li>Cohérence</li>
+                </ul>
+              </li>
+          </ul>
           <pre>
-<code>package { 'openssh':
+<code>package { 'java5':
     ensure =&gt; present,
 }</code>
 </pre>
-          <ul>
-            <li>Mettre avec le code tout ce qui est nécessaire à son bon fonctionnement</li>
-            <li>Présent avec le code dans la branche de gestion de version</li>
-          </ul>
         </section>
         <section>
           <h1>Bénéfices</h1>
           <ul>
-            <li>Auditable</li>
+            <li>Gain de temps énorme</li>
             <li>Meilleure interaction dev/ops</li>
-            <li>Cohérent</li>
-            <li>Reproductible</li>
+            <li>Cohérent avec le code</li>
+            <li>Reproductible : moins d'erreur</li>
+            <li>Traçable : historisation</li>
           </ul>
         </section>
         <section class="center">
@@ -303,9 +322,11 @@
               <li>Passe de 2 semaines à 2 heures !</li>
             </ul></li>
           </ul>
+          <img class="stretch"src="img/atr17/success_now.jpg" />
         </section>
         <section class="center">
           <h1>The end</h1>
+          <img class="stretch"src="img/atr17/theend.jpg" />
         </section>
         <section class="center">
           <h1>Épilogue</h1>
@@ -338,9 +359,9 @@
                src="img/feedbackloop.png" />
         </section>
         <section>
-          <h1>Biz Dev Ops (*)</h1>
+          <h1>Boucle DevOps</h1>
           <img class="stretch"
-               src="img/testNotPhase.png" />
+               src="img/atr17/devops.jpg" />
         </section>
         <section class="center">
           <h1>Sens de l'Histoire</h1>
@@ -383,6 +404,44 @@
               <li>Langages déclaratifs</li>
             </ul></li>
           </ul>
+        </section>
+        <section class="center">
+            <h1>Specification As Code</h1>
+        </section>
+        <section>
+            <img class="stretch"
+                 src="img/specs.png" />
+            <p>
+                <cite>From Specification By Example by Gojko Adzic.</cite>
+            </p>
+        </section>
+        <section data-background="img/gherkin.png"></section>
+        <section>
+            <h1>Documentation as code</h1>
+            <ul>
+                <li>Living Documentation</li>
+                <li>Markdown</li>
+                <li>Asciidoc</li>
+                <li>Swagger</li>
+            </ul>
+        </section>
+        <section>
+            <h1>Living Documentation</h1>
+            <img class="stretch"
+                 src="img/glossary.jpg" />
+            <p>
+                <cite>From
+                    <a href="https://leanpub.com/livingdocumentation">https://leanpub.com/livingdocumentation</a>by Cyrille Martraire</cite>
+            </p>
+        </section>
+        <section>
+            <h1>Living Documentation</h1>
+            <img class="stretch"
+                 src="img/diagram.jpg" />
+            <p>
+                <cite>From
+                    <a href="https://leanpub.com/livingdocumentation">https://leanpub.com/livingdocumentation</a>by Cyrille Martraire</cite>
+            </p>
         </section>
         <section class="center">
           <h1>Bénéfices du code</h1>
@@ -665,53 +724,18 @@
             </ul></li>
           </ul>
         </section>
-          <section class="center">
-              <h1>Specification As Code</h1>
-          </section>
-          <section>
-              <img class="stretch"
-                   src="img/specs.png" />
-              <p>
-                  <cite>From Specification By Example by Gojko Adzic.</cite>
-              </p>
-          </section>
-          <section data-background="img/gherkin.png"></section>
-          <section>
-              <h1>Documentation as code</h1>
-              <ul>
-                  <li>Living Documentation</li>
-                  <li>Markdown</li>
-                  <li>Asciidoc</li>
-                  <li>Swagger</li>
-              </ul>
-          </section>
-          <section>
-              <h1>Living Documentation</h1>
-              <img class="stretch"
-                   src="img/glossary.jpg" />
-              <p>
-                  <cite>From
-                      <a href="https://leanpub.com/livingdocumentation">https://leanpub.com/livingdocumentation</a>by Cyrille Martraire</cite>
-              </p>
-          </section>
-          <section>
-              <h1>Living Documentation</h1>
-              <img class="stretch"
-                   src="img/diagram.jpg" />
-              <p>
-                  <cite>From
-                      <a href="https://leanpub.com/livingdocumentation">https://leanpub.com/livingdocumentation</a>by Cyrille Martraire</cite>
-              </p>
-          </section>
-          <section>
-              <h1>Markdown</h1>
-              <img alt="Markdown example"
-                   class="stretch"
-                   src="img/markdown-preview.png" />
-              <p>
-                  <cite>From https://mastercaweb.u-strasbg.fr/rediger-web-markdown/</cite>
-              </p>
-          </section>
+        <section>
+            <h1>Spécification exécutables</h1>
+        </section>
+        <section>
+            <h1>Markdown</h1>
+            <img alt="Markdown example"
+                 class="stretch"
+                 src="img/markdown-preview.png" />
+            <p>
+                <cite>From https://mastercaweb.u-strasbg.fr/rediger-web-markdown/</cite>
+            </p>
+        </section>
           <section>
               <h1>Asciidoc</h1>
               <img src="img/asciidoc-Big.png" />
