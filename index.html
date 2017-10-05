@@ -53,7 +53,7 @@
       <div class="slides">
         <section class="center">
           <h1>
-            Mon équipe se focalise sur 
+            Mon équipe se focalise sur
             <br />la <b>valeur métier</b>
             <br />... grâce au <b>code</b>
           </h1>
@@ -345,12 +345,14 @@
           </ul>
         </section>
         <section class="center">
-          <h1>Sens de l'Histoire</h1>
+          <h1>Sens de l'<b>H</b>istoire</h1>
           <ul>
             <li>De : projet d'un seul bloc</li>
             <li>Vers : projet en petits blocs</li>
             <li>Implique : itérations et incréments</li>
             <li>Implique : Répétition des tâches</li>
+            <li>Implique : Besoins de répétabilité</li>
+            <li>Implique : Besoins de feedbacks</li>
           </ul>
         </section>
         <section>
@@ -359,12 +361,12 @@
                src="img/feedbackloop.png" />
         </section>
         <section>
-          <h1>Boucle DevOps</h1>
+          <h1>Boucle d'apprentissage</h1>
           <img class="stretch"
-               src="img/atr17/devops.jpg" />
+               src="img/atr17/devops.png" />
         </section>
         <section class="center">
-          <h1>Sens de l'Histoire</h1>
+          <h1>Sens de l'<b>H</b>istoire</h1>
           <ul>
             <li>Répétition des tâches</li>
             <li>Implique : Automatisation</li>
@@ -473,7 +475,7 @@
         </section>
         <section class="center">
           <ul>
-            <li>Automatisation 
+            <li>Automatisation
             <ul>
               <li>La 1ère fois coûte plus cher</li>
               <li>Les suivantes sont quasi gratuites</li>
@@ -500,7 +502,7 @@
         </section>
         <section class="center">
           <ul>
-            <li>“Automatisation” sans code 
+            <li>“Automatisation” sans code
             <ul>
               <li>Installer à la main</li>
               <li>En faire une image copie</li>
@@ -575,13 +577,13 @@
         <h1>Véracité des informations</h1>
         <ul>
           <li>Doc sujet à interprétation, le code non</li>
-          <li>Un document peut être erroné 
+          <li>Un document peut être erroné
           <ul>
             <li>Il est écrit qu’il faut faire A puis B</li>
             <li>“Ah oui? Je ne regarde plus.”</li>
             <li>“En fait non, maintenant il faut faire dans l’autre sens”</li>
           </ul></li>
-          <li>Le code ne ment pas 
+          <li>Le code ne ment pas
           <ul>
             <li>Si le script de déploiement fait A puis B, alors l'ordi fait A puis B</li>
           </ul></li>
@@ -590,19 +592,19 @@
       <section class="center">
           <h1>Pérénité des informations</h1>
           <ul>
-            <li>Anecdote 
+            <li>Anecdote
             <ul>
               <li>Mise en place d’un environnement de dev pour firmware de clavier</li>
-              <li>Tous les 2 ans 
+              <li>Tous les 2 ans
               <ul>
                 <li>J’oubli !</li>
               </ul></li>
-              <li>Dockerfile à la rescousse 
+              <li>Dockerfile à la rescousse
               <ul>
                 <li>https://github.com/gcollic/Grimoire60_keyboard/blob/master/firmware/Dockerfile</li>
               </ul></li>
             </ul></li>
-            <li>La documentation sous forme papier 
+            <li>La documentation sous forme papier
             <ul>
               <li>Est vite obsolète ou côute cher à maintenir pour ne pas l’être</li>
             </ul></li>
@@ -1206,32 +1208,38 @@ services:
 </pre>
         </section>
         <section>
-          <h1>Rappels</h1>
-          <ul>
-            <li>Spécification As Code
-              <ul>
-                <li>Livre : Specification by example</li>
-                <li>Gherkin (Ruby=Cucumber / .Net=SpecFlow / etc)</li>
-              </ul>
-            </li>
-            <li>Infrastructure As Code
-              <ul>
-                <li>Puppet / Ansible / Saltstack</li>
-                <li>Docker !</li>
-              </ul>
-            </li>
-            <li>Bonnes pratiques
-              <ul>
-                <li>Clean Code
-                  <ul><li>Un code difficile à maintenir ne vous aidera pas</li></ul>
-                </li>
-                <li>Autonomation</li>
-                <li>Idempotence</li>
-                <li>Tout mettre en gestion de version</li>
-                <li>Toujours penser "métier"</li>
-              </ul>
-            </li>
-          </ul>
+          <h1>Biz Dev Ops</h1>
+          <img class="stretch"
+               src="img/testNotPhase.png" />
+        </section>
+        <section>
+          <h1>What DevOps ?</h1>
+          <br />
+          <h2 class="atLeft fragment shrink"
+              data-fragment-index="1">
+          <b>C</b>ULTURE</h2>
+          <h2 class="fragment shrink"
+              data-fragment-index="1">
+          <b>M</b>EASUREMENT</h2>
+          <h2 class="atLeft fragment grow"
+              data-fragment-index="1">
+          <b>A</b>UTOMATION</h2>
+          <h2 class="fragment grow"
+              data-fragment-index="2">
+          <b>S</b>HARING</h2>
+          <div class="fragment fade-in atLeft"
+               data-fragment-index="1">
+            <ul>
+              <li>TDD</li>
+              <li>* as Code</li>
+            </ul>
+          </div>
+          <div class="atRight fragment fade-in"
+               data-fragment-index="2">
+            <ul>
+              <li>* as Code</li>
+            </ul>
+          </div>
         </section>
         <section>
           <h1>Questions ?</h1>
@@ -1318,8 +1326,7 @@ services:
                },
                {src: 'plugin/zoom-js/zoom.js', async: true},
                {src: 'plugin/notes/notes.js', async: true}
-           ],
-           slideNumber: 'c/t'
+           ]
        });
     </script>
   </body>
