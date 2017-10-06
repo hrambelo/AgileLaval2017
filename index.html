@@ -37,6 +37,7 @@
       .reveal ul > li > ul > li { font-size: 0.5em !important; }
       #title-footer { z-index: 0; }
       .reveal pre {font-size: 1.1em !important; line-height: 1em !important;}
+      .reveal pre code {max-height: none;}
     </style>
   </head>
   <body>
@@ -97,12 +98,12 @@
         <section>
           <h1>Problème ...</h1>
           <ul>
-            <li>Innovation 
+            <li>Innovation
             <ul>
               <li>Incertitudes métiers</li>
               <li>Incertitudes techniques</li>
             </ul></li>
-            <li>Marché évoluant de + en + vite 
+            <li>Marché évoluant de + en + vite
             <ul>
               <li>Obsolescence des besoins initiaux</li>
             </ul></li>
@@ -112,11 +113,11 @@
           <h1>... Solution</h1>
           <h2>XP ou Scrum à la rescousse</h2>
           <ul>
-            <li>Découpage des besoins 
+            <li>Découpage des besoins
             <ul>
               <li>En usage métiers indépendants</li>
             </ul></li>
-            <li>Livraisons fréquentes 
+            <li>Livraisons fréquentes
             <ul>
               <li>Validation continue</li>
               <li>Repriorisation continue</li>
@@ -172,7 +173,7 @@
         <section class="center">
           <h1>1995 : Youpi !</h1>
           <ul>
-            <li>Livraison de valeur métier 
+            <li>Livraison de valeur métier
             <ul>
               <li>Passe de 2 ans à 2 semaines !</li>
             </ul></li>
@@ -202,7 +203,7 @@
           <h1>Réunir !</h1>
           <ul>
             <li>Branche de code pour chaque fonctionnalité métier</li>
-            <li>Inclure avec le code tout ce qui est nécessaire à son bon fonctionnement 
+            <li>Inclure avec le code tout ce qui est nécessaire à son bon fonctionnement
             <ul>
               <li>Code de l'application</li>
               <li>Scripts de mise à jour de la BDD</li>
@@ -237,7 +238,7 @@
         <section>
           <h1>Enjeu</h1>
           <ul>
-            <li>Reproduire 
+            <li>Reproduire
             <ul>
               <li>Le succès 2 ans -&gt; 2 semaines</li>
               <li>En succès 2 semaines -&gt; 2 heures</li>
@@ -249,11 +250,11 @@
         <section>
           <h1>Solutions</h1>
           <ul>
-            <li>Métier 
+            <li>Métier
             <ul>
               <li>Kanban</li>
             </ul></li>
-            <li>Technique 
+            <li>Technique
             <ul>
               <li>?</li>
             </ul></li>
@@ -297,7 +298,7 @@
         <section class="center">
           <h1>2010 : Youpi !</h1>
           <ul>
-            <li>Livraison de valeur métier 
+            <li>Livraison de valeur métier
             <ul>
               <li>Passe de 2 semaines à 2 heures !</li>
             </ul></li>
@@ -316,7 +317,7 @@
           <h1>Ce qu'on a vu</h1>
           <ul>
             <li>Sujets variés</li>
-            <li>Bénéfices proches 
+            <li>Bénéfices proches
             <ul>
               <li>Gain de temps</li>
               <li>Déterminismes</li>
@@ -360,7 +361,7 @@
         <section class="center">
           <h1>De plus en plus de code pour plus d'impact métier</h1>
           <ul>
-            <li>Exemple 
+            <li>Exemple
             <ul>
               <li>Le changement stratégique des outils Microsoft</li>
             </ul></li>
@@ -378,7 +379,7 @@
           <h1>Code ?</h1>
           <ul>
             <li>Fichier texte</li>
-            <li>Langages éxécutables, au sens large 
+            <li>Langages éxécutables, au sens large
             <ul>
               <li>Langages de programmation</li>
               <li>Langages déclaratifs</li>
@@ -471,7 +472,7 @@
         </section>
         <section class="center">
           <ul>
-            <li>Pas d’automatisation 
+            <li>Pas d’automatisation
             <ul>
               <li>Installer à la main chaque machine virtuelle</li>
             </ul>
@@ -486,7 +487,7 @@
               <li>En faire une image copie</li>
               <li>Utiliser cette copie pour chaque nouvelle installation</li>
             </ul></li>
-            <li>Problème 
+            <li>Problème
             <ul>
               <li>Changement incompatible (changement d’OS, etc) =></li>
               <li>Comment on avait installé la première VM déjà ?</li>
@@ -495,9 +496,9 @@
         </section>
         <section class="center">
           <ul>
-            <li>Automatisation par le code 
+            <li>Automatisation par le code
             <ul>
-              <li>Provisionning par fichier 
+              <li>Provisionning par fichier
               <ul>
                 <li>Puppet, ansible, saltstack, …</li>
                 <li>Docker</li>
@@ -541,7 +542,7 @@
                 <li>Il ne le suivra peut être pas</li>
                 <li>À tort ou à raison</li>
               </ul></li>
-              <li>Il ne nous préviendra pas forcément 
+              <li>Il ne nous préviendra pas forcément
               <ul>
                 <li>“C’est évident !”</li>
                 <li>“J'ai oublié de te dire, mais ...”</li>
@@ -586,30 +587,40 @@
         <section>
           <h1>Pérénité des informations</h1>
           <ul>
-            <li>Dockerfile à la rescousse
-              <ul>
-                <li>https://github.com/gcollic/Grimoire60_keyboard/blob/master/firmware/Dockerfile</li>
-              </ul>
-            </li>
             <li>La documentation sous forme papier
               <ul>
                 <li>Est vite obsolète ou côute cher à maintenir pour ne pas l’être</li>
-              </ul></li>
-          </ul>
-        </section>
-        <section class="center">
-          <img src="img/atr17/codeCradeLapinCretin.jpg" class="stretch">
-          <ul>
-            <li>Attention
-              <ul>
-                <li>Un code crade n’a jamais rien documenté !</li>
-                <li>Les pratiques “As Code” suppose du code clair et lisible !
-                <ul>
-                  <li>Bien choisir ses outils</li>
-                  <li>Les pratiques de <b>clean code</b> s’appliquent !</li>
-                </ul></li>
               </ul>
             </li>
+          </ul>
+        </section>
+        <section>
+          <h1>Pérénité des informations</h1>
+          <h2>Dockerfile à la rescousse</h2>
+          <pre><code>FROM debian:7.11
+RUN apt-get update && apt-get install -y \
+  make \
+  gcc-avr \
+  avr-libc
+[…]
+ADD src /src
+[…]
+CMD make</code></pre>
+        </section>
+        <section class="center">
+          <h1>Attention !</h1>
+          <img src="img/atr17/codeCradeLapinCretin.jpg" class="stretch">
+          <p>Un code obscur n’a jamais rien documenté !</p>
+        </section>
+        <section class="center">
+          <h1>Code clair et lisible</h1>
+          <ul>
+              <li>Bien choisir ses outils</li>
+              <li><b>Clean Code</b> !</li>
+              <li>Manifeste Agile
+                <ul><li><i>Une attention continue à l'excellence technique et
+                    à une bonne conception renforce l’Agilité.</i></li></ul>
+              </li>
           </ul>
         </section>
         <section class="center">
@@ -638,7 +649,7 @@
             <ul>
               <li>Pull-request</li>
               <li>Cherry-picking</li>
-              <li>Auditabilité des informations 
+              <li>Auditabilité des informations
               <ul>
                 <li>Permet de savoir exactement au fil du temps comment fonctionnait les choses</li>
               </ul></li>
@@ -651,11 +662,11 @@
         <section class="center">
           <h1>Déterminisme</h1>
           <ul>
-            <li>À contexte identique, l’ordinateur refera tout le temps la même chose 
+            <li>À contexte identique, l’ordinateur refera tout le temps la même chose
             <ul>
-              <li>Astuce : rendre le contexte le plus déterministe possible 
+              <li>Astuce : rendre le contexte le plus déterministe possible
               <ul>
-                <li>Fixer les dépendances 
+                <li>Fixer les dépendances
                 <ul>
                   <li>Exemple NPM et/ou github</li>
                 </ul></li>
@@ -718,7 +729,7 @@
         <section class="center">
           <h1 id="du-code-partout">Du code partout ?</h1>
           <ul>
-            <li>Toutes les parties 
+            <li>Toutes les parties
             <ul>
               <li>Spec</li>
               <li>Build</li>
@@ -873,7 +884,7 @@ stage('Deploy'){
         </section>
         <section class="center">
           <ul>
-            <li>Merci ! Questions ? 
+            <li>Merci ! Questions ?
             <ul>
               <li>Liens vers contenu slides</li>
               <li>Rappel de nos noms</li>
@@ -980,7 +991,7 @@ file { 'sshd_config' :
     owner   =&gt; root,
     group   =&gt; root,
     require =&gt; Package[ssh],
-    
+
 <mark>notify  =&gt; Service[ssh]</mark>,
     ...
 }
@@ -1034,7 +1045,7 @@ service { 'ssh' :
     yum: name=httpd state=latest
   - name: write the apache config file
     template: src=/srv/httpd.j2 dest=/etc/httpd.conf
-    
+
 <mark>notify:
     - restart apache</mark>
   - name: ensure apache is running (and enable it at boot)
@@ -1084,7 +1095,7 @@ RUN chmod a+x /app/mvnw
 RUN ls /app/mvnw
 RUN /bin/bash -c '/app/mvnw -e clean install spring-boot:repackage -DskipTests'
 
-CMD /app/mvnw -e 
+CMD /app/mvnw -e
 <mark>spring-boot:run</mark> -DskipTests
             </code>
 </pre>
@@ -1160,7 +1171,7 @@ services:
 version: '2'
 services:
 
-  
+
 <mark>elasticsearch</mark>:
     build: elasticsearch/
     ...
@@ -1168,7 +1179,7 @@ services:
       - "9200:9200"
       - "9300:9300"
 
-  
+
 <mark>logstash</mark>:
     build: logstash/
     ...
@@ -1177,7 +1188,7 @@ services:
     depends_on:
       - elasticsearch
 
-  
+
 <mark>kibana</mark>:
     build: kibana/
     ...
@@ -1208,9 +1219,9 @@ services:
     ...
     ports:
       - "5000:5000"
-    
+
 <mark>depends_on</mark>:
-      
+
 <mark>- elasticsearch</mark>
 
   kibana:
@@ -1218,9 +1229,9 @@ services:
     ...
     ports:
       - "5601:5601"
-    
+
 <mark>depends_on</mark>:
-      
+
 <mark>- elasticsearch</mark>
             </code>
 </pre>
