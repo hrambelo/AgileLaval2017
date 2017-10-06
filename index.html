@@ -38,6 +38,9 @@
       #title-footer { z-index: 0; }
       .reveal pre {font-size: 1.1em !important; line-height: 1em !important;}
       .reveal pre code {max-height: none;}
+      /*FIXME hack pour ne plus masquer le footer ms clairement faut trouver root cause*/
+      .reveal .slide-background {
+        height:92%;}
     </style>
   </head>
   <body>
