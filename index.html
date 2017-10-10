@@ -344,12 +344,6 @@
           </ul>
         </section>
         <section>
-          <h1>Bénéfices rencontrés dans l'histoire ?</h1>
-          <ul>
-            <li>Les bénéfices intrinsèques au code !</li>
-          </ul>
-        </section>
-        <section>
           <h1>Boucle d'apprentissage</h1>
           <img class="stretch"
                src="img/feedbackloop.png" />
@@ -385,23 +379,39 @@
           </ul>
         </section>
         <section>
-          <h1>Pratiques basées sur le code ?</h1>
-          <h2>2 axes de lectures</h2>
-          <ul>
-            <li>Quelles pratiques ?</li>
-            <li>Quels bénéfices communs ?</li>
-          </ul>
-        </section>
-        <section>
           <h1>Code ?</h1>
           <ul>
             <li>Fichier texte</li>
             <li>Langages exécutables
-            <ul>
-              <li>Programmation (Java, C#, Bash, ...)</li>
-              <li>Déclaratifs (xml, json, ...)</li>
-            </ul></li>
-            <li>Ne coûte pas plus cher à être exécuté plus souvent</li>
+              <ul>
+                <li>Programmation (Java, C#, Bash, ...)</li>
+                <li>Déclaratifs (xml, json, ...)</li>
+              </ul></li>
+          </ul>
+        </section>
+        <section>
+          <h1>2 axes de lectures</h1>
+          <ul>
+            <li>Quelles pratiques basées sur le code ?</li>
+            <li>Quels bénéfices communs ?</li>
+          </ul>
+        </section>
+        <section class="center">
+          <h1>Pratiques basées sur le code</h1>
+        </section>
+        <section>
+          <h1>ALL THE THINGS As Code</h1>
+          <img class="stretch"
+               src="img/allthethings.jpg" />
+        </section>
+        <section>
+          <h1 id="du-code-partout">All the things ?</h1>
+          <ul>
+            <li>Spec</li>
+            <li>Build</li>
+            <li>Test</li>
+            <li>Deliver</li>
+            <li>Et plus encore</li>
           </ul>
         </section>
         <section class="center">
@@ -451,17 +461,108 @@
                 <cite>From https://mastercaweb.u-strasbg.fr/rediger-web-markdown/</cite>
             </p>
         </section>
-          <section>
-              <h1>Asciidoc</h1>
-              <img src="img/asciidoc-Big.png" />
-          </section>
-          <section>
-              <h1>Swagger</h1>
-              <img src="img/swagger-ui-screenshot.png" />
-          </section>
+        <section>
+          <h1>Asciidoc</h1>
+          <ul>
+            <li></li>
+          </ul>
+        </section>
+        <section data-background-image="img/asciidoc-Big.png">
+        </section>
+        <section>
+            <h1>Swagger</h1>
+            <img src="img/swagger-ui-screenshot.png" />
+        </section>
+        <section>
+          <h1>Build</h1>
+          <ul>
+            <li>Chaîne de compilation</li>
+            <li>Intégration continue (Jenkins)
+              <ul>
+                <li>Job</li>
+                <li>Pipeline (enchaînement de jobs)</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h1>Build</h1>
+          <pre>
+<code>stage('Checkout'){
+    checkout scm
+}
+stage('Test'){
+    sh 'npm test'
+}
+stage('Build Docker'){
+    sh './dockerBuild.sh'
+}
+stage('Deploy'){
+    echo 'Push to Repo'
+    sh './dockerPushToRepo.sh'
+}</code>
+</pre>
+        </section>
+        <section>
+          <h1>Build</h1>
+          <img class="stretch"
+               src="img/successful-pipeline-OK.png" />
+        </section>
+        <section>
+          <h1>Tests unitaires</h1>
+          <img class="stretch" src="img/tdd-simple.svg">
+        </section>
+        <section>
+          <h1>Tests intégrations</h1>
+          <ul>
+            <li>Exemple Mobilité : Xamarin Test Cloud</li>
+            <li>Selenium Grid</li>
+            <li>Robot Framework</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Delivery</h1>
+          <ul>
+            <li>Puppet, ansible, saltstack</li>
+            <li>Docker</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Certificats HTTPS</h1>
+          <ul>
+            <li>Let’s encrypt</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Modélisation 3D</h1>
+          <img class="stretch" src="img/atr17/openscad.png" />
+        </section>
+        <section>
+          <h1>Slides</h1>
+          <pre>
+<code data-trim="">
+<section>
+
+  <h1>Titre</h1>
+
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+  </ul>
+
+</section>
+</code>
+</pre>
+        </section>
+        <section class="center">
+          <h1>Bénéfices rencontrés dans l'histoire ?</h1>
+          <ul>
+            <li>Les bénéfices intrinsèques au code !</li>
+          </ul>
+        </section>
         <section class="center">
           <h1>Bénéfices du code</h1>
-          <h2>Communs à toutes les pratiques</h2>
+          <h2>Communs à toutes ces pratiques</h2>
         </section>
         <section class="center">
           <h2><i>directement ou indirectement,<br/>tout bénéfice se traduit<br/>en gain de temps</i></h2>
@@ -470,14 +571,13 @@
           <h1>Automatisation</h1>
           <ul>
             <li>La 1ère fois coûte plus cher</li>
-            <li>Les suivantes sont quasi gratuites</li>
+            <li>Les suivantes sont quasi gratuites
+            <ul>
+              <li>Ne coûte pas plus cher à être exécuté plus souvent</li>
+            </ul></li>
             <li>Plus rapide = plus souvent = plus de feedback</li>
             <li>Permet de passer à l'échelle</li>
           </ul>
-        </section>
-        <section>
-          <h2>Attention à garder la maitrise !</h2>
-          <img src="img/atr17/turn-over2.jpg" class="stretch">
         </section>
         <section>
           <h1>Pas d’automatisation</h1>
@@ -623,7 +723,7 @@ CMD make</code></pre>
           </ul>
         </section>
         <section class="center">
-          <h1>Le code est versionnable</h>
+          <h1>Le code est versionnable</h1>
         </section>
         <section>
           <h1>Validation métier = intégration simultanée de</h1>
@@ -671,6 +771,9 @@ CMD make</code></pre>
             </ul></li>
             </ul>
         </section>
+        <section class="center">
+          <h1>Sum up</h1>
+        </section>
         <section>
           <h1>Sum up</h1>
           <ul>
@@ -682,132 +785,19 @@ CMD make</code></pre>
               <li>Pérennes</li>
               <li>Auditables</li>
             </ul></li>
-            <li>Déterministe</li>
-            <li>Fusionnables et livrables par incréments cohérents</li>
+            <li>Déterminisme</li>
+            <li>Fusions et livraisons par incréments cohérents</li>
           </ul>
         </section>
         <section>
-          <h1>Pourquoi c’est important ?</h1>
+          <h1>Sum up</h1>
+          <h2>Pourquoi c’est important ?</h2>
           <ul>
-            <li>Se concentrer sur le métier</li>
-          </ul>
-        </section>
-        <section class="center">
-          <h1>Pratiques basées sur le code</h1>
-        </section>
-        <section>
-          <h1>ALL THE THINGS As Code</h1>
-          <img class="stretch"
-               src="img/allthethings.jpg" />
-        </section>
-        <section>
-          <h1 id="du-code-partout">All the things ?</h1>
-          <ul>
-            <li>Spec</li>
-            <li>Build</li>
-            <li>Test</li>
-            <li>Deliver</li>
-            <li>Et plus encore</li>
+            <li>Se <b>concentrer</b> sur le <b>métier !</b></li>
           </ul>
         </section>
         <section>
-          <h1>Déjà vu</h1>
-          <ul>
-            <li>Spécifications exécutables</li>
-            <li>Documentation</li>
-            <li>Mise à jour de la base de données</li>
-          </ul>
-        </section>
-        <section>
-          <h1>Build</h1>
-          <ul>
-            <li>Chaîne de compilation</li>
-            <li>Intégration continue (Jenkins)
-              <ul>
-                <li>Job</li>
-                <li>Pipeline (enchaînement de jobs)</li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <pre>
-<code>stage('Checkout'){
-    checkout scm
-}
-stage('Test'){
-    sh 'npm test'
-}
-stage('Build Docker'){
-    sh './dockerBuild.sh'
-}
-stage('Deploy'){
-    echo 'Push to Repo'
-    sh './dockerPushToRepo.sh'
-}</code>
-</pre>
-        </section>
-        <section>
-          <img class="stretch"
-               src="img/successful-pipeline-OK.png" />
-        </section>
-        <section>
-          <h1>Tests unitaires</h1>
-          <img class="stretch" src="img/tdd-simple.svg">
-        </section>
-        <section>
-          <h1>Tests intégrations</h1>
-          <ul>
-            <li>Exemple Mobilité : Xamarin Test Cloud</li>
-          </ul>
-        </section>
-        <section>
-          <h1>Delivery</h1>
-          <ul>
-            <li>Puppet, ansible, saltstack</li>
-            <li>Docker</li>
-          </ul>
-        </section>
-        <section>
-          <h1>Certificats HTTPS</h1>
-          <ul>
-            <li>Let’s encrypt</li>
-          </ul>
-        </section>
-        <section>
-          <h1>Modélisation 3D</h1>
-          <img class="stretch" src="img/atr17/openscad.png" />
-        </section>
-        <section>
-          <h1>Slides</h1>
-          <pre>
-<code data-trim="">
-<section>
-
-  <h1>Titre</h1>
-
-  <ul>
-    <li>Item 1</li>
-    <li>Item 2</li>
-  </ul>
-
-</section>
-</code>
-</pre>
-        </section>
-        <section class="center">
-          <h1>Conclusion</h1>
-        </section>
-        <section>
-          <h1>Conclusion</h1>
-          <ul>
-            <li>Plus rapide</li>
-            <li>Plus fiable</li>
-            <li>Plus de temps <b>consacré</b> à la <b>valeur métier !</b></li>
-          </ul>
-        </section>
-        <section>
-          <h1>Conclusion</h1>
+          <h1>Sum up</h1>
           <ul>
             <li>Chaque déploiement est
               <ul>
@@ -815,7 +805,8 @@ stage('Deploy'){
                 <li>Un apport de flexibilité pour tous</li>
               </ul>
             </li>
-            <li>2ans -&gt; 2Semaines -&gt; 2Heures grâce au <b>"As Code"</b></li>
+            <li>2Ans -&gt; 2Semaines -&gt; 2Heures
+              <ul><li>grâce au <b>"As Code"</b></li></ul></li>
             <li><b>Mettre en prod dès le début</b></li>
           </ul>
         </section>
