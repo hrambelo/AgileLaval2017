@@ -85,7 +85,7 @@
         </section>
         <section class="center" data-background-image="img/atr17/fond3.gif">
           <h1 class="newChapitre">Il était une fois</h1>
-          <h2 class="newChapitre">
+          <h2 class="newChapitre fragment" data-fragment-index="1">
             Une <b>équipe</b> réalisant du logiciel<br/>
             Qui voulait <b>livrer</b> de la <b>valeur métier</b><br/>
             aussi <b>fréquemment</b>que possible
@@ -94,7 +94,7 @@
         <section class="center" data-transition="fade" data-transition-speed="1000"
                  data-background-image="img/atr17/fond2.jpg">
           <h1 class="newChapitre">Chapitre 0</h1>
-          <h2 class="newChapitre">Le roi est mort</h2>
+          <h2 class="newChapitre">Hégémonie du Roi cycle en V</h2>
           <img class="stretch"src="img/atr17/cycleenv.png" />
           <img src="img/atr17/redpill.png" style="position: absolute; top: 0; right: 0; border: 0;" />
         </section>
@@ -117,16 +117,12 @@
               <li>Incertitudes métiers</li>
               <li>Incertitudes techniques</li>
             </ul></li>
-            <li>Marché évoluant de + en + vite
-            <ul>
-              <li>Obsolescence des besoins initiaux</li>
-            </ul></li>
           </ul>
           <img src="img/atr17/redpill.png" style="position: absolute; top: 0; right: 0; border: 0;" />
         </section>
         <section>
           <h1>XP ou Scrum</h1>
-          <h2>À la rescousse</h2>
+          <h2>Le roi est mort</h2>
           <ul>
             <li>Découpage des besoins
             <ul>
@@ -145,7 +141,7 @@
           <h1 class="newChapitre">Chapitre I</h1>
           <h2 class="newChapitre">Pas si facile d'être le nouveau roi</h2>
           <img class="stretch"src="img/atr17/dethrone.jpg" />
-          <img src="img/atr17/bluepill.png" style="position: absolute; top: 0; right: 0; border: 0;" />
+          <img src="img/atr17/redpill.png" style="position: absolute; top: 0; right: 0; border: 0;" />
         </section>
         <section>
           <h1>Recette</h1>
@@ -168,7 +164,7 @@
         <section>
           <h1>D'autres problèmes</h1>
           <img class="stretch" src="img/atr17/fail2.jpg" />
-          <img src="img/atr17/bluepill.png" style="position: absolute; top: 0; right: 0; border: 0;" />
+          <img src="img/atr17/redpill.png" style="position: absolute; top: 0; right: 0; border: 0;" />
         </section>
         <section>
           <img class="stretch" src="img/atr17/publish.png" />
@@ -258,7 +254,7 @@
           <img src="img/atr17/redpill.png" style="position: absolute; top: 0; right: 0; border: 0;" />
         </section>
         <section class="center">
-          <h1>Les années passèrent paisiblement, puis …</h1>
+          <h1>Les décennies passèrent paisiblement, puis …</h1>
           <img src="img/atr17/bluepill.png" style="position: absolute; top: 0; right: 0; border: 0;" />
         </section>
         <section class="center" data-transition="fade" data-transition-speed="1000"
@@ -575,34 +571,32 @@ stage('Deploy'){
         <section>
           <h1>Tests intégrations</h1>
           <ul>
-            <li>Exemple Mobilité : Xamarin Test Cloud</li>
-            <li>Selenium Grid</li>
-            <li>Robot Framework</li>
-          </ul>
+            <li>Multiples cibles
+              <ul>
+                <li>Mobile
+                  <ul><li>Xamarin Test Cloud</li></ul>
+                </li>
+                <li>Web
+                <ul>
+                  <li>Selenium Grid</li>
+                  <li>Robot Framework</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            </ul>
           <img src="img/atr17/redpill.png" style="position: absolute; top: 0; right: 0; border: 0;" />
         </section>
         <section>
           <h1>Delivery</h1>
           <ul>
             <li>Puppet, ansible, saltstack</li>
-            <li>Docker</li>
+            <li class="fragment" data-fragment-index="1">Docker</li>
           </ul>
           <pre>
-<code>package { 'java5':
+<code>package { 'java9':
     ensure =&gt; present,
 }</code>
-</pre>
-
-          <pre>
-<code>if [[ -n "$JAVA_HOME" ]] &&
-  [[ -x "$JAVA_HOME/bin/java" ]];
-then
-    echo found java executable in JAVA_HOME
-    _java="$JAVA_HOME/bin/java"
-else
-    echo "no java"
-fi
-</code>
 </pre>
           <img src="img/atr17/bluepill.png" style="position: absolute; top: 0; right: 0; border: 0;" />
         </section>
@@ -612,7 +606,6 @@ fi
             <li>Let’s encrypt</li>
           </ul>
           <br/>
-          <img src="img/atr17/letsencrypt.jpeg" >
           <img src="img/atr17/letsencrypt2.png" >
           <img src="img/atr17/redpill.png" style="position: absolute; top: 0; right: 0; border: 0;" />
         </section>
@@ -785,7 +778,7 @@ fi
               <li>Mise en place d’un environnement de dev pour firmware de clavier</li>
               <li>Tous les 2 ans
                 <ul>
-                  <li>J’oubli !</li>
+                  <li>J’oublie !</li>
                 </ul>
               </li>
             </ul>
@@ -824,19 +817,36 @@ CMD make</code></pre>
         <section>
           <h1>Code clair et lisible</h1>
           <ul>
-              <li>Bien choisir ses outils
-                <ul>
-                  <li>HTML vs. AsciiDoc</li>
-                  <li>Bash vs. Puppet</li>
-                </ul>
-              </li>
-              <li><b>Clean Code</b> !</li>
-              <li>Manifeste Agile
-                <ul><li><i>Une attention continue à l'excellence technique et
-                    à une bonne conception renforce l’Agilité.</i></li></ul>
-              </li>
+            <li><b>Clean Code</b> !</li>
+            <li>Manifeste Agile
+              <ul><li><i>Une attention continue à l'excellence technique et
+                à une bonne conception renforce l’Agilité.</i></li></ul>
+            </li>
           </ul>
           <img src="img/atr17/bluepill.png" style="position: absolute; top: 0; right: 0; border: 0;" />
+        </section>
+        <section>
+          <h1>Code clair et lisible</h1>
+          <ul>
+              <li>Bien choisir ses outils
+              </li>
+            </ul>
+          <pre>
+<code>package { 'java9':
+    ensure =&gt; present,
+}</code>
+</pre>
+          <pre>
+<code>if [[ -n "$JAVA_HOME" ]] &&
+  [[ -x "$JAVA_HOME/bin/java" ]];
+then
+    echo found java executable in JAVA_HOME
+    _java="$JAVA_HOME/bin/java"
+else
+    echo "no java"
+fi
+</code>
+</pre>
         </section>
         <section class="center">
           <h1>Le code est versionnable</h1>
@@ -873,24 +883,6 @@ CMD make</code></pre>
             <li>À contexte identique, l’ordinateur refera tout le temps la même chose</li>
           </ul>
           <img src="img/atr17/redpill.png" style="position: absolute; top: 0; right: 0; border: 0;" />
-        </section>
-        <section>
-          <h1>Modularité</h1>
-          <ul>
-            <li>Exemple de la chaîne de déploiement
-            <ul>
-              <li>Automatisation de
-                <ul>
-                  <li>la compilation</li>
-                  <li>le déploiement</li>
-                  <li>l’installation des prérequis sur la machine virtuelle</li>
-                  <li>la création de la machine virtuelle</li>
-                  <li>la mise en place de l’infrastructure complète</li>
-                </ul></li>
-              <li>Et demain ?</li>
-            </ul></li>
-            </ul>
-          <img src="img/atr17/bluepill.png" style="position: absolute; top: 0; right: 0; border: 0;" />
         </section>
         <section class="center" data-transition="fade" data-transition-speed="1000"
                  data-background-image="img/atr17/fond3.gif">
